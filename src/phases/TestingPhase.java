@@ -19,7 +19,7 @@ public class TestingPhase extends Phase{
         this.x = 10;
         this.y = 10;
         this.moveLeft = true;
-        this.scheduling = new Scheduling(20);
+        this.scheduling = new Scheduling(500);
     }
 
     @Override
