@@ -1,8 +1,11 @@
 package phases;
 
 import game.Scheduling;
+import graphics.ImageLoader;
+import graphics.SpriteSheet;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class TestingPhase extends Phase{
     //Fields only for testing purpose
@@ -10,6 +13,9 @@ public class TestingPhase extends Phase{
     private int y;
     private boolean moveLeft;
     private boolean moveRight;
+    private BufferedImage spaceshipImage = ImageLoader.loadImage("/images/spaceship.png");
+    private SpriteSheet spriteSheet;
+    private BufferedImage bombImage;
 
     //Class with algorithm for calculating fps.
     private Scheduling scheduling;
@@ -20,6 +26,8 @@ public class TestingPhase extends Phase{
         this.y = 10;
         this.moveLeft = true;
         this.scheduling = new Scheduling(50);
+        this.spriteSheet =  new SpriteSheet(ImageLoader.loadImage("/images/ExplosionSpriteSheet.png"));
+        this.bombImage = this.spriteSheet.crop(100, 100, 100, 100);
     }
 
     @Override
@@ -35,7 +43,9 @@ public class TestingPhase extends Phase{
 
     @Override
     public void render(Graphics graphics) {
-        graphics.drawRect(x,y,30, 100);
+
+        graphics.drawImage(spaceshipImage, this.x, this.y, 200, 200, null);
+        graphics.drawImage(bombImage, 300, 300, 100, 100, null);
     }
 
     private void tick() {

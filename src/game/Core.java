@@ -78,11 +78,11 @@ public class Core implements Runnable {
     }
 
     private void update() {
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+       // try {
+       //     Thread.sleep(10);
+       // } catch (InterruptedException e) {
+       //     e.printStackTrace();
+       // }
         this.phase.update();
 
         //Testing
