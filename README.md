@@ -1,2 +1,2 @@
 # Team-Beach-Thunder-
-Softuni Teamwork Game
+Softuni Teamwork Game.
