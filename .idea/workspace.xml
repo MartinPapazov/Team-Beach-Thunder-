@@ -2,16 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/graphics/ImageLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/graphics/SpriteSheet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utilitys/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/GameObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/Menu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/MenuInputHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Utilitys/Messages.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/game/Core.class" afterPath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/game/Core.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/Launcher.class" afterPath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/Launcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/phases/TestingPhase.class" afterPath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/phases/TestingPhase.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/phases/PhaseManager.class" afterPath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/phases/PhaseManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/phases/PhaseMenu.class" afterPath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/phases/PhaseMenu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Core.java" afterPath="$PROJECT_DIR$/src/game/Core.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/display/Display.java" afterPath="$PROJECT_DIR$/src/display/Display.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Launcher.java" afterPath="$PROJECT_DIR$/src/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Team-Beach-Thunder-.iml" afterPath="$PROJECT_DIR$/Team-Beach-Thunder-.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phases/TestingPhase.java" afterPath="$PROJECT_DIR$/src/phases/TestingPhase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phases/PhaseManager.java" afterPath="$PROJECT_DIR$/src/phases/PhaseManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phases/PhaseMenu.java" afterPath="$PROJECT_DIR$/src/phases/PhaseMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Scheduling.java" afterPath="$PROJECT_DIR$/src/game/Scheduling.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Team-Beach-Thunder-.iws" />
@@ -34,21 +40,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-              <folding />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Phase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/phases/Phase.java">
+      <file leaf-file-name="MenuInputHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/MenuInputHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5300668">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/display/Display.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -58,11 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/game/Core.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-              <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-              <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-              <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+              <caret line="70" column="31" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#run#0;class#Core#0" expanded="false" />
@@ -72,45 +89,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/graphics/ImageLoader.java">
+      <file leaf-file-name="Phase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/phases/Phase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExplosionSpriteSheet.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/images/ExplosionSpriteSheet.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestingPhase.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestingPhase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/phases/TestingPhase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33184856">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpriteSheet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/graphics/SpriteSheet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="e#176#177#0" expanded="true" />
-                <element signature="e#222#223#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,8 +115,16 @@
         <entry file="file://$PROJECT_DIR$/src/phases/PhaseMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,7 +143,21 @@
         <entry file="file://$PROJECT_DIR$/src/game/Scheduling.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+              <folding>
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/GameObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -168,18 +185,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/phases/phase.java" />
-        <option value="$PROJECT_DIR$/src/display/Display.java" />
         <option value="$PROJECT_DIR$/src/contracts/GameObject.java" />
         <option value="$PROJECT_DIR$/src/phases/phaseManager.java" />
-        <option value="$PROJECT_DIR$/src/phases/PhaseManager.java" />
-        <option value="$PROJECT_DIR$/src/game/Scheduling.java" />
-        <option value="$PROJECT_DIR$/src/phases/PhaseMenu.java" />
         <option value="$PROJECT_DIR$/src/phases/Phase.java" />
-        <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/graphics/ImageLoader.java" />
-        <option value="$PROJECT_DIR$/src/game/Core.java" />
         <option value="$PROJECT_DIR$/src/graphics/SpriteSheet.java" />
         <option value="$PROJECT_DIR$/src/phases/TestingPhase.java" />
+        <option value="$PROJECT_DIR$/src/Utilitys/Messages.java" />
+        <option value="$PROJECT_DIR$/src/models/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/Utilitys/Constants.java" />
+        <option value="$PROJECT_DIR$/src/graphics/Assets.java" />
+        <option value="$PROJECT_DIR$/src/game/MenuImputHandler.java" />
+        <option value="$PROJECT_DIR$/src/display/Display.java" />
+        <option value="$PROJECT_DIR$/src/game/Core.java" />
+        <option value="$PROJECT_DIR$/src/game/Scheduling.java" />
+        <option value="$PROJECT_DIR$/src/phases/PhaseMenu.java" />
+        <option value="$PROJECT_DIR$/src/phases/PhaseManager.java" />
+        <option value="$PROJECT_DIR$/src/models/Menu.java" />
+        <option value="$PROJECT_DIR$/src/game/MenuInputHandler.java" />
       </list>
     </option>
   </component>
@@ -222,9 +246,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,59 +288,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phases" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Team-Beach-Thunder-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Team-Beach-Thunder-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Team-Beach-Thunder-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Team-Beach-Thunder-" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="recentsLimit" value="5" />
@@ -510,7 +494,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1168" height="840" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -523,7 +507,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32627118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22563177" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22563177" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -562,8 +546,101 @@
     <entry file="file://$PROJECT_DIR$/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/Phase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Core.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
+          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
+          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#run#0;class#Core#0" expanded="false" />
+            <element signature="method#start#0;class#Core#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphics/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/ExplosionSpriteSheet.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/TestingPhase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphics/SpriteSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/PhaseMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Scheduling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -601,7 +678,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -609,7 +688,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -617,7 +698,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -681,76 +764,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/display/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/phases/PhaseMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Scheduling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/phases/Phase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Core.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-          <caret line="83" column="9" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#run#0;class#Core#0" expanded="false" />
-            <element signature="method#start#0;class#Core#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/graphics/ImageLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphics/SpriteSheet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,21 +787,145 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/graphics/SpriteSheet.java">
+    <entry file="file://$PROJECT_DIR$/src/Utilitys/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utilitys/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/images/MenuWallpaper.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/graphics/Assets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#254#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/phases/TestingPhase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33184856">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/display/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Scheduling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding>
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Core.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#run#0;class#Core#0" expanded="false" />
+            <element signature="method#start#0;class#Core#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/Phase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/PhaseMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/MenuInputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5300668">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

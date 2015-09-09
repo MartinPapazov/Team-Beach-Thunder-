@@ -1,5 +1,7 @@
 package display;
 
+import Utilitys.Constants;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,7 +14,9 @@ public class Display extends Canvas {
     private JFrame frame;
     private Canvas canvas;
 
-    public Display(String title, int width, int height){
+    private static Display instance;
+
+    protected Display(String title, int width, int height){
         this.title = title;
         this.width = width;
         this.height = height;
@@ -21,6 +25,14 @@ public class Display extends Canvas {
 
     public Canvas getCanvas() {
         return this.canvas;
+    }
+
+    public static Display getInstance(){
+        if (instance == null) {
+            instance = new Display(Constants.Title, Constants.WindowWidth, Constants.WindowHeight);
+        }
+
+        return instance;
     }
 
     private void createFrame() {

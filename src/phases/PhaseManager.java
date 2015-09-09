@@ -6,6 +6,7 @@ public class PhaseManager {
 
     public static Phase getCurrentPhase(){
         if (currentPhase == null){
+            //currentPhase = new PhaseMenu();
             currentPhase = new TestingPhase();
         }
         

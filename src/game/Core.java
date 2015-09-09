@@ -1,9 +1,9 @@
 package game;
 
 import display.Display;
+import graphics.Assets;
 import phases.Phase;
 import phases.PhaseManager;
-import phases.PhaseMenu;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -69,7 +69,9 @@ public class Core implements Runnable {
     }
 
     private void initialization() {
-        this.display = new Display(this.title, this.width, this.height);
+        Assets.initialization();
+
+        this.display = Display.getInstance();
         this.phase = PhaseManager.getCurrentPhase();
 
         //Testing
