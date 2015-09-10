@@ -1,8 +1,8 @@
-package game;
+package game.InputHandlers;
 
 
 import display.Display;
-import models.Menu;
+import models.menus.Menu;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -11,8 +11,8 @@ public class MenuInputHandler implements KeyListener {
 
     private Menu menu;
 
-    public MenuInputHandler(Display display, Menu menu){
-        display.addKeyListener(this);
+    public MenuInputHandler(Menu menu){
+        Display.getInstance().getCanvas().addKeyListener(this);
         this.menu = menu;
     }
 
@@ -20,11 +20,16 @@ public class MenuInputHandler implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
         if (keyCode == KeyEvent.VK_DOWN){
+            this.menu.setCurrentRow(this.menu.getCurrentRow() + 1);
+        }
+
+        if (keyCode == KeyEvent.VK_UP) {
             this.menu.setCurrentRow(this.menu.getCurrentRow() - 1);
         }
 
-        if (keyCode == KeyEvent.VK_UP){
-            this.menu.setCurrentRow(this.menu.getCurrentRow() + 1);
+        if (keyCode == KeyEvent.VK_ENTER) {
+            Display.getInstance().getCanvas().removeKeyListener(this);
+            this.menu.enter();
         }
     }
 

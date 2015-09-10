@@ -1,6 +1,7 @@
 package game;
 
 import display.Display;
+import game.InputHandlers.MenuInputHandler;
 import graphics.Assets;
 import phases.Phase;
 import phases.PhaseManager;
@@ -21,10 +22,6 @@ public class Core implements Runnable {
     private BufferStrategy bufferStrategy;
     private Graphics graphics;
     private static Phase phase;
-
-    //Testing
-    private int a;
-
 
     public Core (String title, int width, int height){
         this.title = title;
@@ -73,23 +70,11 @@ public class Core implements Runnable {
 
         this.display = Display.getInstance();
         this.phase = PhaseManager.getCurrentPhase();
-
-        //Testing
-        a = 10;
-
     }
 
     private void update() {
-       // try {
-       //     Thread.sleep(10);
-       // } catch (InterruptedException e) {
-       //     e.printStackTrace();
-       // }
+        this.phase = PhaseManager.getCurrentPhase();
         this.phase.update();
-
-        //Testing
-        a+=1;
-
     }
 
     private void render() {
@@ -102,15 +87,8 @@ public class Core implements Runnable {
 
         this.phase.render(this.graphics);
 
-        //Testing
-        this.graphics.fillRect(a, 10, 20, 20);
-
-
         this.bufferStrategy.show();
         this.graphics.clearRect(0, 0, this.width, this.height);
         this.graphics.dispose();
     }
-
-
-
 }
