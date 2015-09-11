@@ -1,5 +1,6 @@
 package models.menus;
 
+import phases.GamePlayTESTPhase;
 import phases.PhaseManager;
 import phases.PhaseMenu;
 import phases.TestingPhase;
@@ -23,7 +24,7 @@ public class MainMenu extends Menu {
     public void enter() {
         switch (this.getCurrentRow()){
             case 1:
-                PhaseManager.setCurrentPhase(new TestingPhase());
+                PhaseManager.setCurrentPhase(new GamePlayTESTPhase());
                 break;
             case 2:
                 break;

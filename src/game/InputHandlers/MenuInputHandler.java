@@ -7,12 +7,12 @@ import models.menus.Menu;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class MenuInputHandler implements KeyListener {
+public class MenuInputHandler extends InputHandler {
 
     private Menu menu;
 
     public MenuInputHandler(Menu menu){
-        Display.getInstance().getCanvas().addKeyListener(this);
+        super();
         this.menu = menu;
     }
 

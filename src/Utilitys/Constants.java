@@ -8,4 +8,5 @@ public class Constants {
     public final static int MenuLineSize = 40;
     public final static int MenuTitleSize = 50;
 
+    public final static int GameplayFps = 65;
 }

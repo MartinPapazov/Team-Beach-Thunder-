@@ -17,7 +17,7 @@ public abstract class Menu {
 
 
 
-    public Menu(int rowsInMenu, String title) {
+    protected Menu(int rowsInMenu, String title) {
         this.currentRow = 1;
         this.rowsInMenu = rowsInMenu;
         this.title = title;
