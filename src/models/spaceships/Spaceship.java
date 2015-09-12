@@ -3,7 +3,6 @@ package models.spaceships;
 import graphics.Assets;
 import graphics.SpriteSheetAnimation;
 import models.GameObject;
-import models.spaceships.armors.Armor;
 import models.spaceships.weapons.Weapon;
 
 import java.awt.*;
@@ -17,7 +16,7 @@ public abstract class Spaceship extends GameObject{
     private int count;
 
     private int health;
-    private Armor armor;
+    private int armor;
     private Weapon weapon;
     private int velocity;
 
@@ -30,7 +29,7 @@ public abstract class Spaceship extends GameObject{
     public boolean isMovingDown;
 
     protected Spaceship(String name, int x, int y, int width, int height, BufferedImage objectImage,
-                      int health, Armor armor, Weapon weapon, int velocity) {
+                      int health, int armor, Weapon weapon, int velocity) {
         super(name, x, y, width, height, objectImage);
 
 
@@ -47,8 +46,12 @@ public abstract class Spaceship extends GameObject{
         this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 400, false);
     }
 
+    public Weapon getWeapon(){
+        return this.weapon;
+    }
+
     public void fire() {
-        this.weapon.shoot();
+        this.weapon.shoot(this.getX(), this.getY());
     }
 
     public void hit(int damage) {

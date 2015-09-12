@@ -60,7 +60,7 @@ public abstract class GameObject {
     }
 
     protected void setX(int x) {
-        if (!(x >= Constants.WindowWidth/2) && x > 0 ) {
+        if (!(x + this.width >= Constants.WindowWidth) && x > 0 ) {
             this.x = x;
         }
     }

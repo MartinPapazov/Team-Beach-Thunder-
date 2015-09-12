@@ -6,6 +6,7 @@ import game.InputHandlers.PlayerSpaceshipInputHandler;
 import game.Scheduling;
 import models.spaceships.Spaceship;
 import models.spaceships.TestingSpaceship;
+import models.spaceships.playerSpaceships.Spacecruiser;
 
 import java.awt.*;
 
@@ -16,7 +17,7 @@ public class GamePlayTESTPhase extends Phase {
     private Scheduling scheduling;
 
     public GamePlayTESTPhase() {
-        this.spaceship = new TestingSpaceship(1);
+        this.spaceship = new Spacecruiser(10,50);
         InputHandler handler = new PlayerSpaceshipInputHandler(this.spaceship);
         this.scheduling = new Scheduling(Constants.GameplayFps);
         this.spaceshipTwo = new TestingSpaceship(1);
@@ -32,7 +33,7 @@ public class GamePlayTESTPhase extends Phase {
             deltaTime--;
             this.scheduling.setDeltaTime(deltaTime);
             this.spaceship.hit(1);
-            this.spaceshipTwo.hit(2);
+
         }
     }
 
