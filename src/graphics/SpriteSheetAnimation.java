@@ -18,10 +18,12 @@ public class SpriteSheetAnimation extends SpriteSheet {
     private int cols;
     private int rows;
     private BufferedImage currentImage;
-    private Scheduling scheduling;
+    private boolean cycle;
+    private int animationSpeed;
+    private int animationSpeedCounter;
 
     public SpriteSheetAnimation(BufferedImage bufferedImage, int startX, int startY,
-                                int width, int height, int maxCount, int fps ){
+                                int width, int height, int maxCount, int animationSpeed , boolean cycle){
         super(bufferedImage);
         this.startX = startX;
         this.startY = startY;
@@ -34,16 +36,18 @@ public class SpriteSheetAnimation extends SpriteSheet {
         this.cols = bufferedImage.getWidth() / width;
         this.rows = bufferedImage.getHeight() / height;
         this.positionOnLine = cols - (bufferedImage.getWidth() - startX) / width;
-        this.scheduling = new Scheduling(fps);
+        this.animationSpeed = animationSpeed;
+        this.animationSpeedCounter = 0;
+        this.cycle = cycle;
+
+        this.currentImage = this.getCurrentImage();
     }
 
     public BufferedImage animationCrop(){
-        this.scheduling.update();
-        double deltaTime = this.scheduling.getDeltaTime();
-        if (deltaTime >= 1) {
+       this.animationSpeedCounter++;
+        if (this.animationSpeedCounter == this.animationSpeed) {
+            this.animationSpeedCounter = 0;
             this.currentImage = getCurrentImage();
-            deltaTime--;
-            this.scheduling.setDeltaTime(deltaTime);
         }
 
         return this.currentImage;
@@ -69,6 +73,10 @@ public class SpriteSheetAnimation extends SpriteSheet {
 
         this.count++;
         if (this.count > this.maxCount){
+            if (!this.cycle) {
+                return null;
+            }
+
             this.count = 1;
             this.positionOnLine = cols - (spriteSheet.getWidth() - startX) / width;
             this.currentX = this.startX;

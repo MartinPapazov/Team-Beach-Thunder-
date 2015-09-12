@@ -1,6 +1,7 @@
 package models.spaceships;
 
 import graphics.Assets;
+import graphics.SpriteSheetAnimation;
 import models.GameObject;
 import models.spaceships.armors.Armor;
 import models.spaceships.weapons.Weapon;
@@ -11,10 +12,15 @@ import java.awt.image.BufferedImage;
 
 public abstract class Spaceship extends GameObject{
 
+    private final SpriteSheetAnimation blowingAnimation;
+    private final int animationCounter = 81;
+    private int count;
+
     private int health;
     private Armor armor;
     private Weapon weapon;
     private int velocity;
+
 
     public boolean isExploding;
     public boolean isDestroyed;
@@ -27,6 +33,7 @@ public abstract class Spaceship extends GameObject{
                       int health, Armor armor, Weapon weapon, int velocity) {
         super(name, x, y, width, height, objectImage);
 
+
         this.health = health;
         this.armor = armor;
         this.weapon = weapon;
@@ -37,6 +44,7 @@ public abstract class Spaceship extends GameObject{
         this.isMovingDown = false;
         this.isExploding = false;
         this.isDestroyed = false;
+        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 400, false);
     }
 
     public void fire() {
@@ -47,10 +55,35 @@ public abstract class Spaceship extends GameObject{
         this.health -= damage;
         if (this.health <= 0) {
             this.isExploding = true;
+            this.count = 0;
         }
     }
 
     public void update() {
+        if (this.isDestroyed || this.isExploding) {
+            return;
+        }
+        this.move();
+
+    }
+
+    public void render(Graphics graphics) {
+        if (!isDestroyed) {
+            if (isExploding) {
+                BufferedImage image = blowingAnimation.animationCrop();
+                graphics.drawImage(image, this.getX(), this.getY(), this.getWidth(), this.getHeight(), null);
+                 if (image == null){
+                     this.isDestroyed = true;
+                 }
+
+            } else {
+                graphics.drawImage(this.getObjectImage(), this.getX(), this.getY(), this.getWidth(), this.getHeight(), null);
+                this.weapon.render(graphics);
+            }
+        }
+    }
+
+        private void move() {
         if (this.isMovingUp){
             this.setY(this.getY() - this.velocity);
         }
@@ -71,14 +104,5 @@ public abstract class Spaceship extends GameObject{
         this.weapon.update();
     }
 
-    public void render(Graphics graphics) {
-        if (isExploding){
-            BufferedImage currentAnimationImage = Assets.getCurrentExplosionAnimtionImage();
-            graphics.drawImage(currentAnimationImage, this.getX(), this.getY(), this.getWidth(), this.getHeight(),null);
-        } else {
-            graphics.drawImage(this.getObjectImage(), this.getX(), this.getY(), this.getWidth(), this.getHeight(), null);
-            this.weapon.render(graphics);
-        }
-    }
 
 }

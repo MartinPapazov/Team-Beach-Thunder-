@@ -1,10 +1,9 @@
 package game.InputHandlers;
 
-import display.Display;
-import models.spaceships.Spaceship;
 
+import models.spaceships.Spaceship;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+
 
 public class PlayerSpaceshipInputHandler extends InputHandler {
 

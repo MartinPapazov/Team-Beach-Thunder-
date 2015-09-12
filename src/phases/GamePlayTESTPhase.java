@@ -12,12 +12,14 @@ import java.awt.*;
 public class GamePlayTESTPhase extends Phase {
 
     private Spaceship spaceship;
+    private Spaceship spaceshipTwo;
     private Scheduling scheduling;
 
     public GamePlayTESTPhase() {
         this.spaceship = new TestingSpaceship(1);
         InputHandler handler = new PlayerSpaceshipInputHandler(this.spaceship);
         this.scheduling = new Scheduling(Constants.GameplayFps);
+        this.spaceshipTwo = new TestingSpaceship(1);
     }
 
     @Override
@@ -26,14 +28,17 @@ public class GamePlayTESTPhase extends Phase {
         double deltaTime = this.scheduling.getDeltaTime();
         if (deltaTime >= 1) {
             this.spaceship.update();
+            this.spaceshipTwo.update();
             deltaTime--;
             this.scheduling.setDeltaTime(deltaTime);
-            this.spaceship.hit(3);
+            this.spaceship.hit(1);
+            this.spaceshipTwo.hit(2);
         }
     }
 
     @Override
     public void render(Graphics graphics) {
         this.spaceship.render(graphics);
+        this.spaceshipTwo.render(graphics);
     }
 }
