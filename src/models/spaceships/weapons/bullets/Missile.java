@@ -13,8 +13,8 @@ public class Missile extends Bullet {
     private static final int damage = 200;
     private static final int speed = 1;
 
-    public Missile(int x, int y) {
-        super(name, x, y, width, height, Assets.missileImage, damage, speed);
+    public Missile(int x, int y, boolean flyingRight) {
+        super(name, x, y, width, height, Assets.missileImage, damage, speed, flyingRight);
     }
 
 

@@ -61,6 +61,5 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
 
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 }

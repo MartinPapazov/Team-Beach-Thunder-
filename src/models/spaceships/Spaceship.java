@@ -12,14 +12,12 @@ import java.awt.image.BufferedImage;
 public abstract class Spaceship extends GameObject{
 
     private final SpriteSheetAnimation blowingAnimation;
-    private final int animationCounter = 81;
     private int count;
 
     private int health;
     private int armor;
     private Weapon weapon;
     private int velocity;
-
 
     public boolean isExploding;
     public boolean isDestroyed;

@@ -8,7 +8,7 @@ public class TestingSpaceship extends Spaceship{
     public TestingSpaceship( int velocity) {
         super("Gosho", 50, 40, 50, 60, Assets.testingSpaceshipImage, 500,
                 1000,
-                new MissileLauncher(),
+                new MissileLauncher(true),
                 velocity);
     }
 }

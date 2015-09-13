@@ -49,6 +49,7 @@ public class PhaseMenu extends Phase{
            linePosition += Constants.MenuLineSize + 10;
 
         }
+
         this.menu.render(graphics);
 
     }

@@ -11,9 +11,10 @@ public abstract class Weapon {
     private ArrayList<Bullet>  bulletsFired;
     protected int cooldown;
     protected int cooldownCounter;
+    protected boolean shootingRight;
 
 
-    protected Weapon(int cooldown) {
+    protected Weapon(int cooldown, boolean shootingRight) {
         this.bulletsFired = new ArrayList<>();
         this.cooldown = cooldown;
         this.cooldownCounter = cooldown;
@@ -28,8 +29,7 @@ public abstract class Weapon {
     public void update() {
         this.cooldownCounter++;
         for (int i = 0; i < bulletsFired.size(); i++) {
-             this.bulletsFired.get(i).update();
-
+            this.bulletsFired.get(i).update();
         }
     }
 

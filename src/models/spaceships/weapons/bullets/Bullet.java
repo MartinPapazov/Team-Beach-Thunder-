@@ -10,16 +10,22 @@ public abstract class Bullet extends GameObject {
 
     private int damage;
     private int speed;
+    private boolean flyingRight;
 
 
-    public Bullet(String name, int x, int y, int width, int height, BufferedImage objectImage, int damage, int speed) {
+    public Bullet(String name, int x, int y, int width, int height, BufferedImage objectImage, int damage, int speed, boolean flyingRight) {
         super(name, x, y, width, height, objectImage);
         this.damage = damage;
         this.speed = speed;
+        this.flyingRight = flyingRight;
     }
 
     public void update() {
-        this.setX(this.getX() + this.speed);
+        if (flyingRight) {
+            this.setX(this.getX() + this.speed);
+        } else {
+            this.setX(this.getX() - this.speed);
+        }
     }
 
     public void render(Graphics graphics) {
