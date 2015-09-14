@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/PlayerFiles/1.txt" afterPath="$PROJECT_DIR$/resources/PlayerFiles/1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/models/Player.class" afterPath="$PROJECT_DIR$/out/production/Team-Beach-Thunder-/models/Player.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlayerData/PlayerRepository.java" afterPath="$PROJECT_DIR$/src/PlayerData/PlayerRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Team-Beach-Thunder-.iws" />
@@ -88,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spacecruiser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Spacecruiser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/spaceships/playerSpaceships/Spacecruiser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23690774">
+            <state vertical-scroll-proportion="0.0">
               <caret line="9" column="52" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="52" />
               <folding />
             </state>
@@ -118,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayerRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PlayerData/PlayerRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.45386535">
+              <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#262#263#0" expanded="true" />
@@ -225,8 +226,8 @@
         <option value="$PROJECT_DIR$/src/models/levels/TestLevel.java" />
         <option value="$PROJECT_DIR$/src/models/Player.java" />
         <option value="$PROJECT_DIR$/src/PlayerData/Database.java" />
-        <option value="$PROJECT_DIR$/src/PlayerData/PlayerRepository.java" />
         <option value="$PROJECT_DIR$/src/game/Core.java" />
+        <option value="$PROJECT_DIR$/src/PlayerData/PlayerRepository.java" />
       </list>
     </option>
   </component>
@@ -627,7 +628,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442244179813</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added new package PlayerData, Database and PlayerRepository classes and 1.txt where reads player info">
+      <created>1442244746890</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1442244746890</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1082,20 +1089,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayerData/PlayerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/InputHandlers/PlayerSpaceshipInputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1144,9 +1137,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/spaceships/playerSpaceships/Spacecruiser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23690774">
+        <state vertical-scroll-proportion="0.0">
           <caret line="9" column="52" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="52" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlayerData/PlayerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45386535">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

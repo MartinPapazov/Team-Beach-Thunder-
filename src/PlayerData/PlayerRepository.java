@@ -28,8 +28,8 @@ public class PlayerRepository {
 
         String playerName = tokens[0];
         String namesOfOwnedSpaceshipsAsStrings = tokens[1];
-        int coins = Integer.parseInt(tokens[3]);
-        int levelsCompleted = Integer.parseInt(tokens[4]);
+        int coins = Integer.parseInt(tokens[2]);
+        int levelsCompleted = Integer.parseInt(tokens[3]);
 
         ArrayList<String> namesOfOwnedSpaceships = new ArrayList<>(Arrays.asList(namesOfOwnedSpaceshipsAsStrings.split(",")));
         Player player = new Player(playerName, null, namesOfOwnedSpaceships, coins, levelsCompleted);
