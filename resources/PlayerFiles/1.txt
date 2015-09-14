@@ -1,1 +1,1 @@
-name$spaceShipname,spaceShipname1$0$0
+name$Spacecruiser,spaceShipname1,spaceShipname2$0$0
