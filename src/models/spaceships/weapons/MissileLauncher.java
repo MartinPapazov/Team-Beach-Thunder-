@@ -4,9 +4,8 @@ import models.spaceships.weapons.bullets.Bullet;
 import models.spaceships.weapons.bullets.Missile;
 
 public class MissileLauncher extends Weapon {
-    private static final int cooldown = 40;
 
-    public MissileLauncher(boolean shootingRight) {
+    public MissileLauncher(int cooldown, boolean shootingRight) {
         super(cooldown, shootingRight);
     }
 

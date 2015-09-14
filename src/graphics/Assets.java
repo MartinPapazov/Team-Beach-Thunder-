@@ -6,9 +6,13 @@ public class Assets {
 
     public static BufferedImage explosionImage;
     public static BufferedImage backgroundImage;
+    public static BufferedImage levelOneBackground;
 
-    //Spaceships
+    //Player spaceships
     public static BufferedImage spacecruiserImage;
+
+    //Enemy spaceships
+    public static BufferedImage deathbringerImage;
 
     //Bullets
     public static BufferedImage missileImage;
@@ -23,6 +27,8 @@ public class Assets {
         explosionImage = ImageLoader.loadImage("/images/ExplosionSpriteSheet.png");
         spacecruiserImage = ImageLoader.loadImage("/images/Spacecruiser.png");
         missileImage = ImageLoader.loadImage("/images/missile.png");
+        levelOneBackground =  ImageLoader.loadImage("/images/LevelOneBackground.jpg");
+        deathbringerImage =  ImageLoader.loadImage("/images/Deathbringer.png");
     }
 
 

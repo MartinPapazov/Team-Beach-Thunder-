@@ -63,12 +63,14 @@ public abstract class GameObject {
         if (!(x + this.width >= Constants.WindowWidth) && x > 0 ) {
             this.x = x;
         }
+        this.updateBoundingBox();
     }
 
     protected void setY(int y) {
         if (!(y + this.height >= Constants.WindowHeight) && y > 0) {
             this.y = y;
         }
+        this.updateBoundingBox();
     }
 
 }

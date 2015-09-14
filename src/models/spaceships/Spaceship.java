@@ -41,7 +41,7 @@ public abstract class Spaceship extends GameObject{
         this.isMovingDown = false;
         this.isExploding = false;
         this.isDestroyed = false;
-        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 400, false);
+        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 200, false);
     }
 
     public Weapon getWeapon(){

@@ -1,9 +1,7 @@
 package models.menus;
 
-import phases.GamePlayTESTPhase;
-import phases.PhaseManager;
-import phases.PhaseMenu;
-import phases.TestingPhase;
+import models.levels.TestLevel;
+import phases.*;
 
 import java.awt.*;
 
@@ -24,7 +22,7 @@ public class MainMenu extends Menu {
     public void enter() {
         switch (this.getCurrentRow()){
             case 1:
-                PhaseManager.setCurrentPhase(new GamePlayTESTPhase());
+                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new TestLevel()));
                 break;
             case 2:
                 break;

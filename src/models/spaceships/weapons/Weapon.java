@@ -1,6 +1,5 @@
 package models.spaceships.weapons;
 
-import models.spaceships.Spaceship;
 import models.spaceships.weapons.bullets.Bullet;
 
 import java.awt.*;
@@ -18,6 +17,7 @@ public abstract class Weapon {
         this.bulletsFired = new ArrayList<>();
         this.cooldown = cooldown;
         this.cooldownCounter = cooldown;
+        this.shootingRight = shootingRight;
     }
 
     public ArrayList<Bullet> getBulletsFired() {
@@ -31,6 +31,7 @@ public abstract class Weapon {
         for (int i = 0; i < bulletsFired.size(); i++) {
             this.bulletsFired.get(i).update();
         }
+        this.checkForUnneededBullets();
     }
 
     public void render(Graphics graphics) {
@@ -42,4 +43,19 @@ public abstract class Weapon {
     protected void addBullet(Bullet bullet) {
         this.bulletsFired.add(bullet);
     }
+
+    private void checkForUnneededBullets() {
+        ArrayList<Bullet> activeBullets = new ArrayList<>();
+        for (int i = 0; i < this.bulletsFired.size(); i++) {
+            Bullet bullet = this.bulletsFired.get(i);
+            if (bullet.getStatus()) {
+                activeBullets.add(bullet);
+            }
+        }
+
+        this.bulletsFired = activeBullets;
+
+    }
+
+
 }
