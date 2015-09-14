@@ -16,6 +16,7 @@ public abstract class Spaceship extends GameObject{
 
     private int health;
     private int armor;
+    private int maxArmor;
     private Weapon weapon;
     private int velocity;
 
@@ -33,6 +34,7 @@ public abstract class Spaceship extends GameObject{
 
         this.health = health;
         this.armor = armor;
+        this.maxArmor = armor;
         this.weapon = weapon;
         this.velocity = velocity;
         this.isMovingLeft = false;
@@ -48,15 +50,26 @@ public abstract class Spaceship extends GameObject{
         return this.weapon;
     }
 
+    public int getHealth() {
+        return this.health;
+    }
+
+    public int getArmor() {
+        return this.armor;
+    }
+
     public void fire() {
         this.weapon.shoot(this.getX(), this.getY());
     }
 
     public void hit(int damage) {
-        this.health -= damage;
-        if (this.health <= 0) {
-            this.isExploding = true;
-            this.count = 0;
+        this.armor -= damage;
+        if (this.armor <= 0) {
+            this.health -= damage;
+            if (this.health <= 0) {
+                this.isExploding = true;
+                this.count = 0;
+            }
         }
     }
 
@@ -65,7 +78,6 @@ public abstract class Spaceship extends GameObject{
             return;
         }
         this.move();
-
     }
 
     public void render(Graphics graphics) {

@@ -28,9 +28,12 @@ public abstract class Level {
     }
 
     public void update() {
-        this.enemys.stream().forEach((e) -> spaceShipRotation(e));
-        this.enemys.stream().forEach((e) -> e.update());
-        this.enemys.stream().forEach((e) -> e.fire());
+        for (int i = 0; i < this.enemys.size(); i++) {
+            Spaceship enemy = this.enemys.get(i);
+            enemy.update();
+            this.spaceShipRotation(enemy);
+        }
+
     }
 
     public void render(Graphics graphics) {

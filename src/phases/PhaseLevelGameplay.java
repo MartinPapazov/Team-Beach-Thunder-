@@ -4,6 +4,7 @@ import Utilitys.Constants;
 import game.InputHandlers.InputHandler;
 import game.InputHandlers.PlayerSpaceshipInputHandler;
 import game.Scheduling;
+import graphics.Assets;
 import models.levels.Level;
 import models.spaceships.Spaceship;
 import models.spaceships.playerSpaceships.Spacecruiser;
@@ -18,11 +19,15 @@ public class PhaseLevelGameplay extends Phase {
     //TODO: Player field
     private Spaceship playerSpaceShip;
     private Scheduling scheduling;
+    private int playerFullHealth;
+    private int playerFullArmor;
 
 
     public PhaseLevelGameplay(Level level) {
         this.level = level;
         this.playerSpaceShip = new Spacecruiser(50, 50);
+        this.playerFullHealth = this.playerSpaceShip.getHealth();
+        this.playerFullArmor = this.playerSpaceShip.getArmor();
         InputHandler handler = new PlayerSpaceshipInputHandler(playerSpaceShip);
         //TODO:
         this.scheduling = new Scheduling(Constants.GameplayFps);
@@ -46,6 +51,46 @@ public class PhaseLevelGameplay extends Phase {
     public void render(Graphics graphics) {
         this.level.render(graphics);
         this.playerSpaceShip.render(graphics);
+        graphics.setColor(Color.lightGray);
+        graphics.fillRect(0, 0, Constants.WindowWidth, 30);
+        graphics.setColor(Color.black);
+        graphics.drawString("Player name", 5, 20);
+
+        //Draw player health
+        graphics.drawString("HP:", 200, 20);
+        graphics.setColor(Color.white);
+        graphics.fillRect(225, 5, 100, 20);
+        int playerHealthInPercentage = getPlayerAtributePercent(this.playerFullHealth, this.playerSpaceShip.getHealth());
+        if (playerHealthInPercentage > 20) {
+            graphics.setColor(Color.green);
+        } else {
+            graphics.setColor(Color.red);
+        }
+        graphics.fillRect(225, 5, playerHealthInPercentage, 20);
+        graphics.setColor(Color.black);
+        graphics.drawRect(225, 5, 100, 20);
+        graphics.drawString(playerSpaceShip.getHealth() + "/" + this.playerFullHealth, 230, 20);
+
+        //Draw player armor
+        graphics.drawString("Armor:", 350, 20);
+        graphics.setColor(Color.white);
+        graphics.fillRect(390, 5, 100, 20);
+        graphics.setColor(Color.CYAN);
+        int playerArmorInPercentage = this.getPlayerAtributePercent(this.playerFullArmor, this.playerSpaceShip.getArmor());
+        graphics.fillRect(390, 5, playerArmorInPercentage, 20);
+        graphics.setColor(Color.black);
+        graphics.drawRect(390, 5, 100, 20);
+        graphics.drawString(this.playerSpaceShip.getArmor() + "/" + this.playerFullArmor, 395, 20);
+    }
+
+    private int getPlayerAtributePercent(int full, int current) {
+        double onePercent = full / 100;
+        if (current <= 0) {
+            return 0;
+        }
+        double playerHealth = current / onePercent;
+
+        return (int)playerHealth;
     }
 
     private void checkForClash() {
