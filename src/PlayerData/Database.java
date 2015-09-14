@@ -13,12 +13,9 @@ public class Database {
             BufferedReader bufferedReader = new BufferedReader(reader);
             line = bufferedReader.readLine();
 
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             e.printStackTrace();
-        } catch (IOException ioex){
-            ioex.printStackTrace();
         }
-
         return line;
     }
 
