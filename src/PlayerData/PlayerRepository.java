@@ -35,4 +35,15 @@ public class PlayerRepository {
         Player player = new Player(playerName, null, namesOfOwnedSpaceships, coins, levelsCompleted);
         return player;
     }
+
+    public void setPlayerById(int number, Player player) {
+
+        String namesOfOwnedSpaceshipsAsStrings = String.join(",", player.getNamesOfOwnedSpaceships());
+        String playerInfo = player.getName() + "$"
+                + player.getCurrentSpaceship() + "$"
+                + namesOfOwnedSpaceshipsAsStrings + "$"
+                + player.getCoins() + "$"
+                + player.getLevelsCompleted();
+        this.playerDatabase.writeInTextFile(playerInfo,number);
+    }
 }
