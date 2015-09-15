@@ -25,6 +25,7 @@ public class MainMenu extends Menu {
                 PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new TestLevel()));
                 break;
             case 2:
+                PhaseManager.setCurrentPhase(new PhaseTester());
                 break;
             case 3:
                 break;

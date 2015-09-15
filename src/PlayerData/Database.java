@@ -7,6 +7,7 @@ public class Database {
     public String readFromTextFile(int fileNumber) {
         String filePath = String.format("resources\\PlayerFiles\\" + fileNumber + ".txt");
         File file = new File(filePath);
+
         String line = "";
         try {
             FileReader reader = new FileReader(file);
