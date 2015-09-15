@@ -7,6 +7,7 @@ import game.Scheduling;
 import graphics.Assets;
 import models.levels.Level;
 import models.spaceships.Spaceship;
+import models.spaceships.playerSpaceships.BlackViper;
 import models.spaceships.playerSpaceships.Spacecruiser;
 import models.spaceships.weapons.bullets.Bullet;
 
@@ -25,7 +26,7 @@ public class PhaseLevelGameplay extends Phase {
 
     public PhaseLevelGameplay(Level level) {
         this.level = level;
-        this.playerSpaceShip = new Spacecruiser(50, 50);
+        this.playerSpaceShip = new BlackViper(50, 50);
         this.playerFullHealth = this.playerSpaceShip.getHealth();
         this.playerFullArmor = this.playerSpaceShip.getArmor();
         InputHandler handler = new PlayerSpaceshipInputHandler(playerSpaceShip);
@@ -51,8 +52,10 @@ public class PhaseLevelGameplay extends Phase {
     public void render(Graphics graphics) {
         this.level.render(graphics);
         this.playerSpaceShip.render(graphics);
-        graphics.setColor(Color.lightGray);
-        graphics.fillRect(0, 0, Constants.WindowWidth, 30);
+
+        //Draw gray bar
+        graphics.setColor(new Color(153, 153, 102));
+        graphics.fillRect(0, 0, Constants.WindowWidth, Constants.GameStatusBar);
         graphics.setColor(Color.black);
         graphics.drawString("Player name", 5, 20);
 

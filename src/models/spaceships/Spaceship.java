@@ -90,8 +90,8 @@ public abstract class Spaceship extends GameObject{
                  }
 
             } else {
-                graphics.drawImage(this.getObjectImage(), this.getX(), this.getY(), this.getWidth(), this.getHeight(), null);
                 this.weapon.render(graphics);
+                graphics.drawImage(this.getObjectImage(), this.getX(), this.getY(), this.getWidth(), this.getHeight(), null);
             }
         }
     }

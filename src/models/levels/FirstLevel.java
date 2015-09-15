@@ -8,7 +8,7 @@ import models.spaceships.enemySpaceships.Deathbringer;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-public class TestLevel extends Level {
+public class FirstLevel extends Level{
 
     private static final BufferedImage backgroundImage = Assets.levelOneBackground;
     private static final int coins = 500;
@@ -16,17 +16,20 @@ public class TestLevel extends Level {
 
     private int count;
 
-    public TestLevel() {
+    public FirstLevel() {
         super(backgroundImage, coins);
         this.initialization();
         this.count = 0;
     }
 
     private void initialization() {
-        this.addEnemySpaceship(new Deathbringer(Constants.WindowHeight - 200, Constants.WindowWidth/2, 500),
-                new Deathbringer(Constants.WindowWidth - 100, 350, 100),
-                new Deathbringer(500, 100, 50),
-                new Deathbringer(400, 250, 50));
+        this.addEnemySpaceship(
+                new Deathbringer(600, 250, 500),
+                new Deathbringer(700, 350, 70),
+                new Deathbringer(500, 100, 160),
+                new Deathbringer(400, 250, 50),
+                new Deathbringer(800, 450, 50)
+        );
     }
 
     @Override
@@ -45,7 +48,7 @@ public class TestLevel extends Level {
 
         boolean counterFinished = this.count >= movementCounter;
         if ( counterFinished ||
-                spaceship.getY() <= 10 ||
+                spaceship.getY() <= 10 + Constants.GameStatusBar ||
                 spaceship.getY() >= Constants.WindowHeight - spaceship.getHeight() - 10) {
             if (counterFinished) {
                 this.count = 0;

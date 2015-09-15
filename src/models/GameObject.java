@@ -67,7 +67,7 @@ public abstract class GameObject {
     }
 
     protected void setY(int y) {
-        if (!(y + this.height >= Constants.WindowHeight) && y > 0) {
+        if (!(y + this.height >= Constants.WindowHeight) && y > Constants.GameStatusBar) {
             this.y = y;
         }
         this.updateBoundingBox();

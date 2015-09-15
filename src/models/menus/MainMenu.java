@@ -1,9 +1,7 @@
 package models.menus;
 
-import Utilitys.Constants;
-import models.Player;
 import models.levels.EnemySpaceshipsTestLevel;
-import models.levels.TestLevel;
+import models.levels.FirstLevel;
 import phases.*;
 
 import java.awt.*;
@@ -35,7 +33,7 @@ public class MainMenu extends Menu {
                     //TODO: PhaseManager.setCurrentPhase(LoadPlayerPhase) Load palyer phase need to be created.
                 //}
                 //else {
-                    PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new TestLevel()));
+                    PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new FirstLevel()));
                 //}
                 break;
             case 2:

@@ -34,7 +34,7 @@ public abstract class Bullet extends GameObject {
                 this.setX(this.getX() - this.speed);
             }
 
-            boolean outOfBounds = this.getX() + this.getWidth() >= Constants.WindowWidth - 5 || this.getX() <= 5;
+            boolean outOfBounds = this.getX() + this.getWidth() >= Constants.WindowWidth - 10 || this.getX() <= 10;
             if (outOfBounds) {
                 this.isActive = false;
             }

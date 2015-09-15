@@ -21,7 +21,7 @@ public class LaserLauncher extends Weapon{
                 bullet = new RedLaser(x, y, this.shootingRight);
                 this.lastBulletShot = BulletType.RedLaser;
             } else {
-                bullet = new GreenLaser(x, y, this.shootingRight);
+                bullet = new GreenLaser(x, y + 80, this.shootingRight);
                 this.lastBulletShot = BulletType.GreenLaser;
             }
 
