@@ -1,6 +1,7 @@
 package PlayerData;
 
 import models.Player;
+import models.spaceships.Spaceship;
 
 import java.util.*;
 
@@ -10,7 +11,7 @@ public class PlayerRepository {
 
     public PlayerRepository() {
 
-        this.playerDatabase = new Database();
+        this.setPlayerDatabase(new Database());
     }
 
     public Database getPlayerDatabase() {
@@ -24,12 +25,12 @@ public class PlayerRepository {
     public Player getPlayerById(int number) {
         String playerInfo;
         playerInfo = this.playerDatabase.readFromTextFile(number);
-        String[] tokens = playerInfo.split("$");
+        String[] tokens = playerInfo.split(";");
 
         String playerName = tokens[0];
-        String namesOfOwnedSpaceshipsAsStrings = tokens[1];
-        int coins = Integer.parseInt(tokens[2]);
-        int levelsCompleted = Integer.parseInt(tokens[3]);
+        String namesOfOwnedSpaceshipsAsStrings = tokens[2];
+        int coins = Integer.parseInt(tokens[3]);
+        int levelsCompleted = Integer.parseInt(tokens[4]);
 
         ArrayList<String> namesOfOwnedSpaceships = new ArrayList<>(Arrays.asList(namesOfOwnedSpaceshipsAsStrings.split(",")));
         Player player = new Player(playerName, null, namesOfOwnedSpaceships, coins, levelsCompleted);
@@ -44,6 +45,6 @@ public class PlayerRepository {
                 + namesOfOwnedSpaceshipsAsStrings + "$"
                 + player.getCoins() + "$"
                 + player.getLevelsCompleted();
-        this.playerDatabase.writeInTextFile(playerInfo,number);
+        this.playerDatabase.writeInTextFile(playerInfo, number);
     }
 }
