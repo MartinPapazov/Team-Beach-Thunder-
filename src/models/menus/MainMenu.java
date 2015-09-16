@@ -43,6 +43,7 @@ public class MainMenu extends Menu {
             case 3:
                 break;
             case 4:
+                PhaseManager.setCurrentPhase(new PhaseMenu(new PurchaseSpaceshipMenu()));
                 break;
             case 5:
                 System.exit(0);
