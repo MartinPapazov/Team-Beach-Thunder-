@@ -1,9 +1,11 @@
 package models.spaceships;
 
+import audio.AudioAssets;
 import graphics.Assets;
 import graphics.SpriteSheetAnimation;
 import models.GameObject;
 import models.spaceships.weapons.Weapon;
+import sun.audio.AudioPlayer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -19,6 +21,7 @@ public abstract class Spaceship extends GameObject{
     private int maxArmor;
     private Weapon weapon;
     private int velocity;
+    private boolean explode;
 
     public boolean isExploding;
     public boolean isDestroyed;
@@ -44,6 +47,7 @@ public abstract class Spaceship extends GameObject{
         this.isExploding = false;
         this.isDestroyed = false;
         this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 200, false);
+        this.explode = true;
     }
 
     public Weapon getWeapon(){
@@ -67,6 +71,11 @@ public abstract class Spaceship extends GameObject{
         if (this.armor <= 0) {
             this.health -= damage;
             if (this.health <= 0) {
+                if (explode) {
+                    AudioPlayer.player.start(AudioAssets.getExplosionAudio());
+                    explode = false;
+                }
+
                 this.isExploding = true;
                 this.count = 0;
             }

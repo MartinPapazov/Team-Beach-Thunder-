@@ -1,5 +1,6 @@
 package game;
 
+import audio.AudioAssets;
 import display.Display;
 import game.InputHandlers.MenuInputHandler;
 import graphics.Assets;
@@ -67,6 +68,7 @@ public class Core implements Runnable {
 
     private void initialization() {
         Assets.initialization();
+        AudioAssets.initialization();
 
         this.display = Display.getInstance();
         this.phase = PhaseManager.getCurrentPhase();

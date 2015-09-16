@@ -1,10 +1,14 @@
 package models.menus;
 
+import audio.AudioAssets;
 import models.levels.EnemySpaceshipsTestLevel;
 import models.levels.FirstLevel;
 import phases.*;
+import sun.audio.AudioData;
+import sun.audio.AudioPlayer;
 
 import java.awt.*;
+import java.io.InputStream;
 
 public class MainMenu extends Menu {
 
@@ -18,9 +22,11 @@ public class MainMenu extends Menu {
 
     private final static int rows = 6;
 
-    public MainMenu() {
+    private InputStream menuMusic;
 
+    public MainMenu() {
         super(rows, title);
+        this.menuMusic = AudioAssets.getMenuMusic();
         this.initialization();
     }
 
@@ -29,6 +35,7 @@ public class MainMenu extends Menu {
 
         switch (this.getCurrentRow()){
             case 1:
+                AudioPlayer.player.stop(this.menuMusic);
                 //if (PhaseManager.getCurrentPlayer() == null){
                     //TODO: PhaseManager.setCurrentPhase(LoadPlayerPhase) Load palyer phase need to be created.
                 //}
@@ -54,7 +61,9 @@ public class MainMenu extends Menu {
     }
 
     @Override
-    public void update() {}
+    public void update() {
+
+    }
 
     @Override
     public void render(Graphics graphics) {}
@@ -62,6 +71,7 @@ public class MainMenu extends Menu {
     @Override
     protected void initialization() {
 
+        AudioPlayer.player.start(this.menuMusic);
         this.addRows(firstLine);
         this.addRows(secondLine);
         this.addRows(thirdLine);

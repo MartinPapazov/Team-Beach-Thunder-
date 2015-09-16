@@ -1,8 +1,10 @@
 package models.menus;
 
 
+import audio.AudioAssets;
 import display.Display;
 import game.InputHandlers.MenuInputHandler;
+import sun.audio.AudioPlayer;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -32,6 +34,7 @@ public abstract class Menu {
     public void setCurrentRow(int currentRow) {
         boolean isOutOfBounds = currentRow > this.rowsInMenu || currentRow < 1;
         if (!isOutOfBounds) {
+            AudioPlayer.player.start(AudioAssets.getMenuChoiceSound());
             this.currentRow = currentRow;
         }
     }

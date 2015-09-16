@@ -1,8 +1,6 @@
 import Utilitys.Constants;
 import game.Core;
 
-import java.awt.*;
-
 public class Launcher {
 
     public static void main(String[] args) {

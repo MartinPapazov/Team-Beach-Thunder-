@@ -1,7 +1,10 @@
 package models.spaceships.weapons;
 
+import audio.AudioAssets;
+import graphics.Assets;
 import models.spaceships.weapons.bullets.BlueLaser;
 import models.spaceships.weapons.bullets.Bullet;
+import sun.audio.AudioPlayer;
 
 public class LaserCannon extends Weapon {
 
@@ -12,6 +15,7 @@ public class LaserCannon extends Weapon {
     @Override
     public void shoot(int x, int y) {
         if (this.cooldownCounter >= this.cooldown) {
+            AudioPlayer.player.start(AudioAssets.getSpaceshipBigLasserOneAudiInputStream());
             Bullet bigBlueLaser1 = new BlueLaser(x, y, this.shootingRight);
             Bullet bigBlueLaser2 = new BlueLaser(x + 10, y + 20, this.shootingRight);
             Bullet bigBlueLaser3 = new BlueLaser(x + 20, y + 40, this.shootingRight);

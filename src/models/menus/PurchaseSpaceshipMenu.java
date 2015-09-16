@@ -1,7 +1,5 @@
 package models.menus;
 
-import models.levels.EnemySpaceshipsTestLevel;
-import models.levels.FirstLevel;
 import phases.*;
 
 import java.awt.*;
