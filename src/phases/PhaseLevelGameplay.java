@@ -8,6 +8,7 @@ import graphics.Assets;
 import models.levels.Level;
 import models.spaceships.Spaceship;
 import models.spaceships.playerSpaceships.BlackViper;
+import models.spaceships.playerSpaceships.RH5;
 import models.spaceships.playerSpaceships.Spacecruiser;
 import models.spaceships.weapons.bullets.Bullet;
 

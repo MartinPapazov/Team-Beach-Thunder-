@@ -13,7 +13,7 @@ public class BlackViper extends Spaceship {
     private static final int height = 100;
     private static final int health = 1000;
     private static final int armor = 1500;
-    private static final Weapon weapon = new LaserCannon(40, true);
+    private static final Weapon weapon = new LaserCannon(100, true);
     private static final int velocity = 1;
 
     public BlackViper(int x, int y) {

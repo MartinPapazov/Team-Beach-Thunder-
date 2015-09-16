@@ -18,6 +18,7 @@ public class Assets {
     //Player spaceships
     public static BufferedImage spacecruiserImage;
     public static BufferedImage blackViperImage;
+    public static BufferedImage RH5SpaceshipImage;
 
     //Enemy spaceships
     public static BufferedImage deathbringerImage;
@@ -27,6 +28,7 @@ public class Assets {
     public static BufferedImage redLaserImage;
     public static BufferedImage greenLaserImage;
     public static BufferedImage blueLaserImge;
+    public static BufferedImage fireLaserImage;
 
 
 
@@ -44,7 +46,8 @@ public class Assets {
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
         blueLaserImge = spriteSheet.crop(0, 128, 256, 16);
-
+        RH5SpaceshipImage = ImageLoader.loadImage("/images/RH5.png");
+        fireLaserImage = spriteSheet.crop(0, 240, 256, 16);
 
 
     }
