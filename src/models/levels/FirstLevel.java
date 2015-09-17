@@ -29,8 +29,8 @@ public class FirstLevel extends Level{
                 new Deathbringer(600, 250, 500),
                 new Deathbringer(700, 350, 70),
                 new Deathbringer(500, 100, 160),
-                new BlueShip(400, 250, 50),
-                new NightRider(800, 450, 50)
+                new Deathbringer(400, 250, 50),
+                new Deathbringer(800, 450, 50)
         );
     }
 

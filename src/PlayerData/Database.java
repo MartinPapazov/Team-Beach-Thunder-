@@ -4,9 +4,6 @@ import java.io.*;
 
 public class Database {
 
-    public Database() {
-    }
-
     public String readFromTextFile(int fileNumber) {
         String filePath = "resources\\PlayerFiles\\" + fileNumber + ".txt";
         File file = new File(filePath);

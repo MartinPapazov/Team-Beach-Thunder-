@@ -33,17 +33,16 @@ public class PlayerRepository {
         int levelsCompleted = Integer.parseInt(tokens[4]);
 
         ArrayList<String> namesOfOwnedSpaceships = new ArrayList<>(Arrays.asList(namesOfOwnedSpaceshipsAsStrings.split(",")));
-        Player player = new Player(playerName, null, namesOfOwnedSpaceships, coins, levelsCompleted);
-        return player;
+        return new Player(playerName, null, namesOfOwnedSpaceships, coins, levelsCompleted);
     }
 
     public void setPlayerById(int number, Player player) {
 
         String namesOfOwnedSpaceshipsAsStrings = String.join(",", player.getNamesOfOwnedSpaceships());
-        String playerInfo = player.getName() + "$"
-                + player.getCurrentSpaceship() + "$"
-                + namesOfOwnedSpaceshipsAsStrings + "$"
-                + player.getCoins() + "$"
+        String playerInfo = player.getName() + ";"
+                + player.getCurrentSpaceship() + ";"
+                + namesOfOwnedSpaceshipsAsStrings + ";"
+                + player.getCoins() + ";"
                 + player.getLevelsCompleted();
         this.playerDatabase.writeInTextFile(playerInfo, number);
     }
