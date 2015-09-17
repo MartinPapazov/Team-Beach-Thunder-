@@ -2,7 +2,6 @@ package models.levels;
 
 import Utilitys.Constants;
 import models.spaceships.Spaceship;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -33,7 +32,6 @@ public abstract class Level {
             enemy.update();
             this.spaceShipRotation(enemy);
         }
-
     }
 
     public void render(Graphics graphics) {

@@ -5,6 +5,7 @@ import game.InputHandlers.InputHandler;
 import game.InputHandlers.PlayerSpaceshipInputHandler;
 import game.Scheduling;
 import graphics.Assets;
+import models.Player;
 import models.levels.Level;
 import models.spaceships.Spaceship;
 import models.spaceships.playerSpaceships.BlackViper;
@@ -18,35 +19,46 @@ import java.util.ArrayList;
 public class PhaseLevelGameplay extends Phase {
 
     private Level level;
-    //TODO: Player field
+    private Player player;
     private Spaceship playerSpaceShip;
     private Scheduling scheduling;
     private int playerFullHealth;
     private int playerFullArmor;
+    private boolean isGameOver;
+    private boolean isGameWin;
 
 
     public PhaseLevelGameplay(Level level) {
         this.level = level;
-        this.playerSpaceShip = new BlackViper(50, 50);
+        this.setPlayer(PhaseManager.getCurrentPlayer());
+        this.playerSpaceShip = this.player.getCurrentSpaceship();
         this.playerFullHealth = this.playerSpaceShip.getHealth();
         this.playerFullArmor = this.playerSpaceShip.getArmor();
-        InputHandler handler = new PlayerSpaceshipInputHandler(playerSpaceShip);
-        //TODO:
+        new PlayerSpaceshipInputHandler(playerSpaceShip);
         this.scheduling = new Scheduling(Constants.GameplayFps);
+        this.isGameOver = false;
+        this.isGameWin = false;
+    }
+
+    private void setPlayer(Player player) {
+        this.player = player;
     }
 
     @Override
     public void update() {
-        this.scheduling.update();
-        double deltaTime = this.scheduling.getDeltaTime();
-        if (deltaTime >= 1) {
-            this.playerSpaceShip.update();
-            this.level.update();
-            deltaTime--;
-            this.scheduling.setDeltaTime(deltaTime);
-        }
+        if (!(this.isGameOver || this.isGameWin)) {
+            this.scheduling.update();
+            double deltaTime = this.scheduling.getDeltaTime();
+            if (deltaTime >= 1) {
+                this.playerSpaceShip.update();
+                this.level.update();
+                deltaTime--;
+                this.scheduling.setDeltaTime(deltaTime);
+            }
 
-        this.checkForClash();
+            this.checkForClash();
+            this.checkForGameEnd();
+        }
     }
 
     @Override
@@ -58,7 +70,7 @@ public class PhaseLevelGameplay extends Phase {
         graphics.setColor(new Color(153, 153, 102));
         graphics.fillRect(0, 0, Constants.WindowWidth, Constants.GameStatusBar);
         graphics.setColor(Color.black);
-        graphics.drawString("Player name", 5, 20);
+        graphics.drawString(this.player.getName(), 5, 20);
 
         //Draw player health
         graphics.drawString("HP:", 200, 20);
@@ -85,6 +97,10 @@ public class PhaseLevelGameplay extends Phase {
         graphics.setColor(Color.black);
         graphics.drawRect(390, 5, 100, 20);
         graphics.drawString(this.playerSpaceShip.getArmor() + "/" + this.playerFullArmor, 395, 20);
+
+        if (this.isGameOver) {
+            //TODO: GAME OVER Message drawn.
+        }
     }
 
     private int getPlayerAtributePercent(int full, int current) {
@@ -116,6 +132,21 @@ public class PhaseLevelGameplay extends Phase {
                 Bullet currentBullet = currentSpaceshipBullets.get(j);
                 currentBullet.checkForClash(this.playerSpaceShip);
             }
+        }
+    }
+
+    private void gameWin() {
+        this.player.setCoins(this.player.getCoins() + this.level.getCoinsPerLevel());
+        this.player.setLevelsCompleted(this.player.getLevelsCompleted() + 1);
+    }
+
+    private void checkForGameEnd() {
+        if (this.playerSpaceShip.getHealth() <= 0) {
+            this.isGameOver = true;
+        }
+
+        if (!this.level.getEnemys().stream().anyMatch((e) -> e.getHealth() > 0)) {
+            this.isGameWin = true;
         }
     }
 }

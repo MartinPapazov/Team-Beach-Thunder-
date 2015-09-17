@@ -2,6 +2,10 @@ package phases;
 
 import models.Player;
 import models.menus.MainMenu;
+import models.spaceships.playerSpaceships.BlackViper;
+import models.spaceships.playerSpaceships.Spacecruiser;
+
+import java.util.ArrayList;
 
 public class PhaseManager {
 
@@ -21,7 +25,7 @@ public class PhaseManager {
     }
 
     public static Player getCurrentPlayer() {
-        return currentPlayer;
+        return new Player("Gosho", new BlackViper(50, 50), new ArrayList<String>(),5,5);
     }
 
     public static void setCurrentPlayer(Player player) {

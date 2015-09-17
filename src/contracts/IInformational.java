@@ -1,9 +1,10 @@
 package contracts;
 
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
+import java.util.Map;
 
 public interface IInformational {
+
     BufferedImage getObjectImage();
-    HashMap<String, String> getInformationAboutObject();
+    Map<String, String> getInformationAboutObject();
 }

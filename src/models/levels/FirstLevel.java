@@ -3,14 +3,12 @@ package models.levels;
 import Utilitys.Constants;
 import graphics.Assets;
 import models.spaceships.Spaceship;
-import models.spaceships.enemySpaceships.BlueShip;
 import models.spaceships.enemySpaceships.Deathbringer;
-import models.spaceships.enemySpaceships.NightRider;
 
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-public class FirstLevel extends Level{
+public class FirstLevel extends Level {
 
     private static final BufferedImage backgroundImage = Assets.levelOneBackground;
     private static final int coins = 500;
@@ -19,12 +17,14 @@ public class FirstLevel extends Level{
     private int count;
 
     public FirstLevel() {
+
         super(backgroundImage, coins);
         this.initialization();
         this.count = 0;
     }
 
     private void initialization() {
+
         this.addEnemySpaceship(
                 new Deathbringer(600, 250, 500),
                 new Deathbringer(700, 350, 70),
@@ -36,6 +36,7 @@ public class FirstLevel extends Level{
 
     @Override
     protected void spaceShipRotation(Spaceship spaceship) {
+
         spaceship.fire();
         if (!spaceship.isMovingDown && !spaceship.isMovingUp) {
             Random random = new Random();
@@ -48,11 +49,11 @@ public class FirstLevel extends Level{
             }
         }
 
-        boolean counterFinished = this.count >= movementCounter;
-        if ( counterFinished ||
-                spaceship.getY() <= 10 + Constants.GameStatusBar ||
-                spaceship.getY() >= Constants.WindowHeight - spaceship.getHeight() - 10) {
-            if (counterFinished) {
+        boolean isCounterFinished = this.count >= movementCounter;
+        boolean isEnemyShipAtTopLine = spaceship.getY() <= 10 + Constants.GameStatusBar;
+        boolean isEnemyShipAtBottomLine = spaceship.getY() >= Constants.WindowHeight - spaceship.getHeight() - 10;
+        if (isCounterFinished || isEnemyShipAtTopLine || isEnemyShipAtBottomLine) {
+            if (isCounterFinished) {
                 this.count = 0;
             }
 
@@ -66,7 +67,5 @@ public class FirstLevel extends Level{
         }
 
         this.count++;
-
-
     }
 }

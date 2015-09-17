@@ -2,6 +2,8 @@ package game.InputHandlers;
 
 
 import models.spaceships.Spaceship;
+import phases.PhaseManager;
+
 import java.awt.event.KeyEvent;
 
 
@@ -10,6 +12,7 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
     private Spaceship spaceship;
 
     public PlayerSpaceshipInputHandler(Spaceship spaceship) {
+
         super();
         this.spaceship = spaceship;
     }
@@ -36,6 +39,10 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
         if (keyCode == KeyEvent.VK_SPACE) {
             this.spaceship.fire();
         }
+
+        if (keyCode == KeyEvent.VK_ENTER) {
+
+        }
     }
 
     @Override
@@ -56,6 +63,7 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
         if (keyCode == KeyEvent.VK_RIGHT) {
             this.spaceship.isMovingRight = false;
         }
+
     }
 
 

@@ -10,13 +10,12 @@ public class Display extends Canvas {
     private int width;
     private int height;
     private String title;
-
     private JFrame frame;
     private Canvas canvas;
-
     private static Display instance;
 
     protected Display(String title, int width, int height){
+
         this.title = title;
         this.width = width;
         this.height = height;
@@ -24,11 +23,14 @@ public class Display extends Canvas {
     }
 
     public Canvas getCanvas() {
+
         return this.canvas;
     }
 
-    public static Display getInstance(){
+    public static Display getInstance() {
+
         if (instance == null) {
+
             instance = new Display(Constants.Title, Constants.WindowWidth, Constants.WindowHeight);
         }
 
@@ -36,6 +38,7 @@ public class Display extends Canvas {
     }
 
     private void createFrame() {
+
         this.frame = new JFrame(this.title);
         this.frame.setSize(this.width, this.height);
         this.frame.setResizable(false);
