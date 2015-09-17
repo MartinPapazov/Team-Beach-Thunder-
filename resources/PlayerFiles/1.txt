@@ -1,1 +1,1 @@
-name;null;Spacecruiser,spaceShipname1,spaceShipname2;0;0
+Gosho;null;Spacecruiser,spaceShipname1,spaceShipname2;0;1
