@@ -22,6 +22,8 @@ public class Assets {
 
     //Enemy spaceships
     public static BufferedImage deathbringerImage;
+    public static BufferedImage nightRiderImage;
+    public static BufferedImage blueShipImage;
 
     //Bullets
     public static BufferedImage missileImage;
@@ -42,14 +44,14 @@ public class Assets {
         missileImage = ImageLoader.loadImage("/images/missile.png");
         levelOneBackground =  ImageLoader.loadImage("/images/LevelOneBackground.jpg");
         deathbringerImage =  ImageLoader.loadImage("/images/Deathbringer.png");
+        nightRiderImage = ImageLoader.loadImage("/images/NightRaider.png");
+        blueShipImage = ImageLoader.loadImage("/images/BlueShip.png"); //Crossfighter BlueShip.png
         redLaserImage = spriteSheet.crop(0, 224, 256, 16);
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
         blueLaserImge = spriteSheet.crop(0, 128, 256, 16);
         RH5SpaceshipImage = ImageLoader.loadImage("/images/RH5.png");
         fireLaserImage = spriteSheet.crop(0, 240, 256, 16);
-
-
     }
 
 
