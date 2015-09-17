@@ -3,7 +3,9 @@ package models.levels;
 import Utilitys.Constants;
 import graphics.Assets;
 import models.spaceships.Spaceship;
+import models.spaceships.enemySpaceships.BlueShip;
 import models.spaceships.enemySpaceships.Deathbringer;
+import models.spaceships.enemySpaceships.NightRider;
 
 import java.awt.image.BufferedImage;
 import java.util.Random;
@@ -22,7 +24,9 @@ public class EnemySpaceshipsTestLevel extends Level {
     }
 
     private void initialization() {
-        this.addEnemySpaceship(new Deathbringer(Constants.WindowHeight - 200, Constants.WindowWidth/2, 500));
+        this.addEnemySpaceship(new Deathbringer(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
+        this.addEnemySpaceship(new NightRider(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
+        this.addEnemySpaceship(new BlueShip(Constants.WindowHeight - 100, Constants.WindowWidth / 2, 300));
     }
 
     @Override
@@ -40,7 +44,7 @@ public class EnemySpaceshipsTestLevel extends Level {
         }
 
         boolean counterFinished = this.count >= movementCounter;
-        if ( counterFinished ||
+        if (counterFinished ||
                 spaceship.getY() <= 10 ||
                 spaceship.getY() >= Constants.WindowHeight - spaceship.getHeight() - 10) {
             if (counterFinished) {
@@ -50,7 +54,7 @@ public class EnemySpaceshipsTestLevel extends Level {
             if (spaceship.isMovingDown) {
                 spaceship.isMovingDown = false;
                 spaceship.isMovingUp = true;
-            } else if(spaceship.isMovingUp) {
+            } else if (spaceship.isMovingUp) {
                 spaceship.isMovingUp = false;
                 spaceship.isMovingDown = true;
             }
