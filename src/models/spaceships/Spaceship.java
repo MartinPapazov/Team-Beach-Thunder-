@@ -1,6 +1,7 @@
 package models.spaceships;
 
 import audio.AudioAssets;
+import contracts.IInformational;
 import graphics.Assets;
 import graphics.SpriteSheetAnimation;
 import models.GameObject;
@@ -9,9 +10,10 @@ import sun.audio.AudioPlayer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.HashMap;
 
 
-public abstract class Spaceship extends GameObject{
+public abstract class Spaceship extends GameObject implements IInformational{
 
     private final SpriteSheetAnimation blowingAnimation;
     private int count;
@@ -62,6 +64,12 @@ public abstract class Spaceship extends GameObject{
         return this.armor;
     }
 
+    public int getVelocity() {
+        return this.velocity;
+    }
+
+
+
     public void fire() {
         this.weapon.shoot(this.getX(), this.getY());
     }
@@ -80,6 +88,21 @@ public abstract class Spaceship extends GameObject{
                 this.count = 0;
             }
         }
+    }
+
+    public HashMap<String, String> getInformationAboutObject() {
+        String name = this.getName();
+        String health = Integer.toString(this.getHealth());
+        String armor = Integer.toString(this.getArmor());
+        String damage = Integer.toString(this.getWeapon().getDamage());
+        String speed = Integer.toString(this.getVelocity());
+        HashMap<String, String> info = new HashMap<>();
+        info.put("Name:", name);
+        info.put("Health:", health);
+        info.put("Armor:", armor);
+        info.put("Damage:", damage);
+        info.put("Speed:", speed);
+        return info;
     }
 
     public void update() {
