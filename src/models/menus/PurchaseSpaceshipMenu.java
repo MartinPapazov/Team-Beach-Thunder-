@@ -9,11 +9,10 @@ public class PurchaseSpaceshipMenu extends Menu {
     private final static String title = "Store";
     private final static String firstSpaceship = "Test - picture";
     private final static String back = "BACK";
-    private final static int rows = 2;
 
     public PurchaseSpaceshipMenu () {
 
-        super(rows, title);
+        super(title);
         this.initialization();
     }
 

@@ -15,13 +15,12 @@ import java.awt.*;
 public class LoadMenu extends Menu {
 
     private final static String title = "Load Game";
-    private final static int rows = 8;
     private final static String back = "Back";
     private PlayerRepository playerRepo;
     private Player player;
 
     public LoadMenu() {
-        super(rows, title);
+        super(title);
         this.playerRepo = new PlayerRepository();
         this.initialization();
 

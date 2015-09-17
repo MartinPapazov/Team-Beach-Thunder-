@@ -20,12 +20,11 @@ public class MainMenu extends Menu {
     private final static String fifthLine = "EXIT";
     private final static String testingSpaceships = "Testing enemy spaceships";
 
-    private final static int rows = 6;
 
     private InputStream menuMusic;
 
     public MainMenu() {
-        super(rows, title);
+        super( title);
         this.menuMusic = AudioAssets.getMenuMusic();
         this.initialization();
     }

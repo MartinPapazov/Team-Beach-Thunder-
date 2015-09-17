@@ -5,7 +5,7 @@ import java.awt.*;
 public class SaveMenu extends Menu {
 
     public SaveMenu(int rowsInMenu, String title) {
-        super(rowsInMenu, title);
+        super(title);
     }
 
     @Override
