@@ -13,11 +13,11 @@ public class Player {
     private int levelsCompleted;
 
     public Player(String name, Spaceship currentSpaceship, ArrayList<String> namesOfOwnedSpaceships, int coins, int levelsCompleted) {
-        this.name = name;
-        this.currentSpaceship = currentSpaceship;
-        this.namesOfOwnedSpaceships = namesOfOwnedSpaceships;
-        this.coins = coins;
-        this.levelsCompleted = levelsCompleted;
+        this.setName(name);
+        this.setCurrentSpaceship(currentSpaceship);
+        this.setNamesOfOwnedSpaceships(namesOfOwnedSpaceships);
+        this.setCoins(coins);
+        this.setLevelsCompleted(levelsCompleted);
     }
 
 

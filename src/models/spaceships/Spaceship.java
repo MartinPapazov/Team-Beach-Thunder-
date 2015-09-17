@@ -75,7 +75,11 @@ public abstract class Spaceship extends GameObject implements IInformational{
     }
 
     public void hit(int damage) {
-        this.armor -= damage;
+        // Armor bug shows negative armor
+        if (this.armor > 0) {
+            this.armor -= damage;
+        }
+
         if (this.armor <= 0) {
             this.health -= damage;
             if (this.health <= 0) {

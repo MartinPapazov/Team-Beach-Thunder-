@@ -68,8 +68,6 @@ public class LoadMenu extends Menu {
             case 6:
 
             case 7:
-                break;
-            case 8:
                 PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
                 break;
         }
@@ -88,9 +86,9 @@ public class LoadMenu extends Menu {
 
     @Override
     protected void initialization() {
-        for (int i = 1; i <= 7; i++) {
+        for (int i = 1; i <= 6; i++) {
             if (isFileExist(i)) {
-                this.addRows(this.playerRepo.getPlayerById(i).getName());
+                this.addRows(this.playerRepo.getPlayerById(i).getName() + this.playerRepo.getPlayerById(i).getLevelsCompleted());
             } else {
                 this.addRows("empty slot");
             }

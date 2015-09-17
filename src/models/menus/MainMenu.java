@@ -24,7 +24,7 @@ public class MainMenu extends Menu {
     private InputStream menuMusic;
 
     public MainMenu() {
-        super( title);
+        super(title);
         this.menuMusic = AudioAssets.getMenuMusic();
         this.initialization();
     }
