@@ -3,10 +3,7 @@ package models.levels;
 import Utilitys.Constants;
 import graphics.Assets;
 import models.spaceships.Spaceship;
-import models.spaceships.enemySpaceships.BlueShip;
-import models.spaceships.enemySpaceships.Deathbringer;
-import models.spaceships.enemySpaceships.LittleSilver;
-import models.spaceships.enemySpaceships.NightRider;
+import models.spaceships.enemySpaceships.*;
 
 import java.awt.image.BufferedImage;
 import java.util.Random;
@@ -29,7 +26,7 @@ public class EnemySpaceshipsTestLevel extends Level {
         this.addEnemySpaceship(new NightRider(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
         this.addEnemySpaceship(new BlueShip(Constants.WindowHeight - 100, Constants.WindowWidth / 2, 300));
         this.addEnemySpaceship(new LittleSilver(Constants.WindowHeight - 50, Constants.WindowWidth / 2, 400));
-
+        this.addEnemySpaceship(new DragonFighter(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 800));
     }
 
     @Override
