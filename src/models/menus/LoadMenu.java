@@ -14,13 +14,14 @@ public class LoadMenu extends Menu {
     private final static String title = "Load Game";
     private final static String back = "Back to Main menu";
     private PlayerRepository playerRepo;
-    private Player player;
+    private Player[] players;
+
 
     public LoadMenu() {
         super(title);
         this.playerRepo = new PlayerRepository();
+        this.players = new Player[6];
         this.initialization();
-
     }
 
 
@@ -68,36 +69,21 @@ public class LoadMenu extends Menu {
 
     @Override
     protected void initialization() {
-        for (int i = 1; i <= 6; i++) {
-            if (isFileExist(i)) {
-                Player currentPlayer = this.playerRepo.getPlayerById(i);
-                String currentRow = currentPlayer.getName() + "  "
-                        + currentPlayer.getLevelsCompleted() + "  "
-                        + currentPlayer.getCurrentSpaceship();
-                this.addRows(currentRow);
-            } else {
+        for (int i = 0; i < players.length; i++) {
+            Player player = this.playerRepo.getPlayerById(i + 1);
+            this.players[i] = player;
+            if (player == null) {
                 this.addRows("empty slot");
+            } else {
+                this.addRows(player.getName());
             }
         }
 
         this.addRows(back);
-
-    }
-
-    private boolean isFileExist(int number) {
-        try {
-            this.playerRepo.getPlayerById(number);
-        } catch (Exception ex) {
-            return false;
-        }
-        return true;
     }
 
     private void loadPlayer(int currentRow) {
-        if (isFileExist(currentRow)) {
-            this.player = playerRepo.getPlayerById(currentRow);
-            PhaseManager.setCurrentPlayer(this.player);
+            PhaseManager.setCurrentPlayer(this.players[currentRow - 1]);
             PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
-        }
     }
 }

@@ -4,7 +4,6 @@ import audio.AudioAssets;
 import models.levels.EnemySpaceshipsTestLevel;
 import models.levels.FirstLevel;
 import phases.*;
-import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 
 import java.awt.*;
@@ -35,27 +34,29 @@ public class MainMenu extends Menu {
         switch (this.getCurrentRow()) {
             case 1:
                 AudioPlayer.player.stop(this.menuMusic);
-                //if (PhaseManager.getCurrentPlayer() == null){
-                //TODO: PhaseManager.setCurrentPhase(LoadPlayerPhase) Load palyer phase need to be created.
-                //}
-                //else {
+
+                //TODO: need to be changed! Testing only!
                 PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new FirstLevel()));
-                //}
                 break;
             case 2:
+                AudioPlayer.player.stop(this.menuMusic);
                 //Testing only
                 PhaseManager.setCurrentPhase(new PhaseMenu(new LoadMenu()) {
                 });
                 break;
             case 3:
+                AudioPlayer.player.stop(this.menuMusic);
                 break;
             case 4:
+                AudioPlayer.player.stop(this.menuMusic);
                 PhaseManager.setCurrentPhase(new PhaseMenu(new PurchaseSpaceshipMenu()));
                 break;
             case 5:
+                AudioPlayer.player.stop(this.menuMusic);
                 System.exit(0);
                 break;
             case 6:
+                AudioPlayer.player.stop(this.menuMusic);
                 PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new EnemySpaceshipsTestLevel()));
             default:
                 break;

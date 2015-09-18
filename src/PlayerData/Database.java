@@ -17,7 +17,7 @@ public class Database {
             bufferedReader.close();
 
         } catch (IOException e) {
-            e.getMessage();
+            return null;
         }
         return line;
     }

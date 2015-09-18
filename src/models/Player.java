@@ -1,8 +1,10 @@
 package models;
 
 import models.spaceships.Spaceship;
+import models.spaceships.playerSpaceships.Spacecruiser;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Player {
 
@@ -20,6 +22,17 @@ public class Player {
         this.setLevelsCompleted(levelsCompleted);
     }
 
+    public Player() {
+        this(
+                "",
+                new Spacecruiser(50, 50),
+                new ArrayList<String>(){{
+                    add("Spacecruiser");
+                }},
+                0,
+                0
+        );
+    }
 
     public String getName() {
         return name;

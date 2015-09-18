@@ -14,17 +14,16 @@ public class PlayerRepository {
         this.setPlayerDatabase(new Database());
     }
 
-    public Database getPlayerDatabase() {
-        return playerDatabase;
-    }
-
     public void setPlayerDatabase(Database playerDatabase) {
         this.playerDatabase = playerDatabase;
     }
 
     public Player getPlayerById(int number) {
-        String playerInfo;
-        playerInfo = this.playerDatabase.readFromTextFile(number);
+        String playerInfo = this.playerDatabase.readFromTextFile(number);
+        if (playerInfo == null || playerInfo.equals("")) {
+            return null;
+        }
+
         String[] tokens = playerInfo.split(";");
 
         String playerName = tokens[0];

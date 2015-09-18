@@ -153,24 +153,19 @@ public abstract class Spaceship extends GameObject implements IInformational{
     }
 
     public void fire() {
-
         this.weapon.shoot(this.getX(), this.getY());
     }
 
     public void hit(int damage) {
-        // Armor bug shows negative armor
         if (this.armor > 0) {
-
             this.armor -= damage;
         }
 
         if (this.armor <= 0) {
-
+            this.armor = 0;
             this.health -= damage;
             if (this.health <= 0) {
-
                 if (this.explode) {
-
                     AudioPlayer.player.start(AudioAssets.getExplosionAudio());
                     this.explode = false;
                 }
@@ -181,7 +176,6 @@ public abstract class Spaceship extends GameObject implements IInformational{
     }
 
     public Map<String, String> getInformationAboutObject() {
-
         String name = this.getName();
         String health = Integer.toString(this.getHealth());
         String armor = Integer.toString(this.getArmor());
@@ -197,9 +191,7 @@ public abstract class Spaceship extends GameObject implements IInformational{
     }
 
     public void update() {
-
         if (this.isDestroyed || this.isExploding) {
-
             return;
         }
 
