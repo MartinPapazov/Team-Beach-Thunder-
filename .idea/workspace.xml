@@ -42,20 +42,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpaceshipStoreMenu.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SpaceshipStoreMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/menus/SpaceshipStoreMenu.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.32890365">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Informational.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contracts/Informational.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecondLevel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SecondLevel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/levels/SecondLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.872093">
+            <state vertical-scroll-proportion="0.0">
               <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -92,19 +104,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SaveMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/menus/SaveMenu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding>
-                <element signature="e#131#132#0" expanded="true" />
-                <element signature="e#159#160#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -199,7 +198,6 @@
         <option value="$PROJECT_DIR$/src/models/spaceships/playerSpaceships/RH5.java" />
         <option value="$PROJECT_DIR$/src/game/InputHandlers/StoreHandler.java" />
         <option value="$PROJECT_DIR$/src/models/menus/Store.java" />
-        <option value="$PROJECT_DIR$/src/models/menus/SpaceshipStoreMenu.java" />
         <option value="$PROJECT_DIR$/src/phases/PhaseTester.java" />
         <option value="$PROJECT_DIR$/src/phases/PhaseLoadMenu.java" />
         <option value="$PROJECT_DIR$/resources/PlayerFiles/2.txt" />
@@ -223,6 +221,7 @@
         <option value="$PROJECT_DIR$/src/models/menus/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/Spaceship.java" />
         <option value="$PROJECT_DIR$/src/models/levels/SecondLevel.java" />
+        <option value="$PROJECT_DIR$/src/models/menus/SpaceshipStoreMenu.java" />
       </list>
     </option>
   </component>
@@ -435,6 +434,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="graphics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Team-Beach-Thunder-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Team-Beach-Thunder-" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contracts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,11 +759,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/images/RH5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/images/TheStrangeShip.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1118,18 +1130,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/menus/SpaceshipStoreMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/models/levels/SecondLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contracts/Informational.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/levels/SecondLevel.java">
+    <entry file="file://$PROJECT_DIR$/src/models/menus/SpaceshipStoreMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.872093">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.32890365">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
