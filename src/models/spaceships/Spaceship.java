@@ -1,7 +1,7 @@
 package models.spaceships;
 
 import audio.AudioAssets;
-import contracts.IInformational;
+import contracts.Informational;
 import graphics.Assets;
 import graphics.SpriteSheetAnimation;
 import models.GameObject;
@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public abstract class Spaceship extends GameObject implements IInformational{
+public abstract class Spaceship extends GameObject implements Informational{
 
     private final SpriteSheetAnimation blowingAnimation;
 

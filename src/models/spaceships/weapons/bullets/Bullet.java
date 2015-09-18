@@ -26,6 +26,10 @@ public abstract class Bullet extends GameObject {
         return isActive;
     }
 
+    public int getDamage() {
+        return this.damage;
+    }
+
     public void update() {
         if (isActive) {
             if (flyingRight) {

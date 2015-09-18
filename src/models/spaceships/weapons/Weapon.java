@@ -25,11 +25,15 @@ public abstract class Weapon {
     }
 
     public int getDamage() {
-        //TODO: Get damage from all bullets, calculate and return.
-        return 0;
-    }
-    public abstract void shoot(int y, int x);
+        int bulletsDamage = 0;
+        for (Bullet bullet : bulletsFired) {
+            bulletsDamage += bullet.getDamage();
+        }
 
+        return bulletsDamage;
+    }
+
+    public abstract void shoot(int x, int y);
 
     public void update() {
         this.cooldownCounter++;
