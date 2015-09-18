@@ -25,6 +25,7 @@ public class Assets {
     public static BufferedImage nightRiderImage;
     public static BufferedImage blueShipImage;
     public static BufferedImage littleSilverShipImage;
+    public static BufferedImage dragonFighterImage;
 
     //Bullets
     public static BufferedImage missileImage;
@@ -34,6 +35,7 @@ public class Assets {
     public static BufferedImage fireLaserImage;
     public static BufferedImage flameStrikeImage;
     public static BufferedImage mediumNovaImage;
+    public static BufferedImage novaImpulseImage;
 
 
 
@@ -50,6 +52,8 @@ public class Assets {
         nightRiderImage = ImageLoader.loadImage("/images/NightRaider.png");
         blueShipImage = ImageLoader.loadImage("/images/BlueShip.png");
         mediumNovaImage = ImageLoader.loadImage("/images/MediumNova.png");
+        novaImpulseImage = ImageLoader.loadImage("/images/NovaImpulse.png");
+        dragonFighterImage = ImageLoader.loadImage("/images/DragonFighter.png");
         redLaserImage = spriteSheet.crop(0, 224, 256, 16);
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
