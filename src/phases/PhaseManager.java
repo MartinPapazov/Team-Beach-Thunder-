@@ -27,14 +27,15 @@ public class PhaseManager {
     }
 
     public static Player getCurrentPlayer() {
-        String nameOfCurrentSpaceship = currentPlayer.getNamesOfOwnedSpaceships().get(0);
-        if (nameOfCurrentSpaceship.equals(null)) {
-            //TODO: return default spaceship
-        }
-        Spaceship defaultSpaceship = getDefaultSpaceship(nameOfCurrentSpaceship);
-        currentPlayer.setCurrentSpaceship(defaultSpaceship);
-        return currentPlayer;
-        //return new Player("Gosho", new BlackViper(50, 50), new ArrayList<String>(),5,5);
+        //String nameOfCurrentSpaceship = currentPlayer.getNamesOfOwnedSpaceships().get(0);
+        //if (nameOfCurrentSpaceship.equals(null)) {
+        //    //TODO: return default spaceship
+        //}
+        //
+        //Spaceship defaultSpaceship = getDefaultSpaceship(nameOfCurrentSpaceship);
+        //currentPlayer.setCurrentSpaceship(defaultSpaceship);
+        //return currentPlayer;
+        return new Player("Gosho", new BlackViper(50, 50), new ArrayList<String>(),5,5);
     }
 
     public static void setCurrentPlayer(Player player) {
