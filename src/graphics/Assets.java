@@ -24,6 +24,7 @@ public class Assets {
     public static BufferedImage deathbringerImage;
     public static BufferedImage nightRiderImage;
     public static BufferedImage blueShipImage;
+    public static BufferedImage littleSilverShipImage;
 
     //Bullets
     public static BufferedImage missileImage;
@@ -54,6 +55,7 @@ public class Assets {
         RH5SpaceshipImage = ImageLoader.loadImage("/images/RH5.png");
         fireLaserImage = spriteSheet.crop(0, 240, 256, 16);
         flameStrikeImage = ImageLoader.loadImage("/images/FlameStrike.png");
+        littleSilverShipImage = ImageLoader.loadImage("/images/LittleSilver.png");
     }
 
 

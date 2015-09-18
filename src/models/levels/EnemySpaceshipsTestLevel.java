@@ -5,6 +5,7 @@ import graphics.Assets;
 import models.spaceships.Spaceship;
 import models.spaceships.enemySpaceships.BlueShip;
 import models.spaceships.enemySpaceships.Deathbringer;
+import models.spaceships.enemySpaceships.LittleSilver;
 import models.spaceships.enemySpaceships.NightRider;
 
 import java.awt.image.BufferedImage;
@@ -27,6 +28,8 @@ public class EnemySpaceshipsTestLevel extends Level {
         this.addEnemySpaceship(new Deathbringer(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
         this.addEnemySpaceship(new NightRider(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
         this.addEnemySpaceship(new BlueShip(Constants.WindowHeight - 100, Constants.WindowWidth / 2, 300));
+        this.addEnemySpaceship(new LittleSilver(Constants.WindowHeight - 50, Constants.WindowWidth / 2, 400));
+
     }
 
     @Override
