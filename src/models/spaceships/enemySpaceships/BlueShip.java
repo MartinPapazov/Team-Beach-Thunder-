@@ -3,6 +3,7 @@ package models.spaceships.enemySpaceships;
 import graphics.Assets;
 import models.spaceships.Spaceship;
 import models.spaceships.weapons.FlameStrike;
+import models.spaceships.weapons.MediumNovaBlast;
 
 public class BlueShip extends Spaceship {
     private static final String BlueShipName = "Blue Ship";
@@ -16,7 +17,7 @@ public class BlueShip extends Spaceship {
         super(BlueShipName, x, y, BlueShipWidth,
                 BlueShipHeight, Assets.blueShipImage,
                 BlueShipHealth, BlueShipArmor,
-                new FlameStrike(cooldown, false),
+                new MediumNovaBlast(cooldown, false),
                 BlueShipVelocity);
     }
 }

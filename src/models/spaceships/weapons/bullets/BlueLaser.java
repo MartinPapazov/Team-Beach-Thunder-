@@ -3,7 +3,7 @@ package models.spaceships.weapons.bullets;
 import graphics.Assets;
 
 public class BlueLaser extends Bullet {
-    private static final String name = "RedLaser";
+    private static final String name = "Blue Laser";
     private static final int width = 40;
     private static final int height = 15;
     private static final int damage = 100;

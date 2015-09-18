@@ -33,6 +33,7 @@ public class Assets {
     public static BufferedImage blueLaserImge;
     public static BufferedImage fireLaserImage;
     public static BufferedImage flameStrikeImage;
+    public static BufferedImage mediumNovaImage;
 
 
 
@@ -48,6 +49,7 @@ public class Assets {
         deathbringerImage =  ImageLoader.loadImage("/images/Deathbringer.png");
         nightRiderImage = ImageLoader.loadImage("/images/NightRaider.png");
         blueShipImage = ImageLoader.loadImage("/images/BlueShip.png");
+        mediumNovaImage = ImageLoader.loadImage("/images/MediumNova.png");
         redLaserImage = spriteSheet.crop(0, 224, 256, 16);
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
