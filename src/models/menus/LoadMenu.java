@@ -3,9 +3,6 @@ package models.menus;
 
 import PlayerData.PlayerRepository;
 import models.Player;
-import models.levels.FirstLevel;
-import models.levels.Level;
-import phases.PhaseLevelGameplay;
 import phases.PhaseManager;
 import phases.PhaseMenu;
 
@@ -15,7 +12,7 @@ import java.awt.*;
 public class LoadMenu extends Menu {
 
     private final static String title = "Load Game";
-    private final static String back = "Back";
+    private final static String back = "Back to Main menu";
     private PlayerRepository playerRepo;
     private Player player;
 
@@ -29,44 +26,29 @@ public class LoadMenu extends Menu {
 
     @Override
     public void enter() {
-        Level currentPlayerLevel;
-        boolean isExistPlayer;
+
         switch (this.getCurrentRow()) {
             case 1:
-                isExistPlayer = isFileExist(1);
-                if (isExistPlayer) {
-                    this.player = playerRepo.getPlayerById(1);
-                    currentPlayerLevel = getCurrentPlayerLevel(this.player);
-                    PhaseManager.setCurrentPhase(new PhaseLevelGameplay(currentPlayerLevel));
-                }
+                loadPlayer(1);
                 break;
 
             case 2:
-                isExistPlayer = isFileExist(2);
-                if (isExistPlayer) {
-                    this.player = playerRepo.getPlayerById(2);
-                    currentPlayerLevel = getCurrentPlayerLevel(this.player);
-                    PhaseManager.setCurrentPhase(new PhaseLevelGameplay(currentPlayerLevel));
-                }
+                loadPlayer(2);
                 break;
 
             case 3:
-                isExistPlayer = isFileExist(3);
-                if (isExistPlayer) {
-                    this.player = playerRepo.getPlayerById(3);
-                    currentPlayerLevel = getCurrentPlayerLevel(this.player);
-                    PhaseManager.setCurrentPhase(new PhaseLevelGameplay(currentPlayerLevel));
-                }
+                loadPlayer(3);
                 break;
 
             case 4:
-
+                loadPlayer(4);
                 break;
             case 5:
-
+                loadPlayer(5);
                 break;
             case 6:
-
+                loadPlayer(6);
+                break;
             case 7:
                 PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
                 break;
@@ -88,7 +70,11 @@ public class LoadMenu extends Menu {
     protected void initialization() {
         for (int i = 1; i <= 6; i++) {
             if (isFileExist(i)) {
-                this.addRows(this.playerRepo.getPlayerById(i).getName() + this.playerRepo.getPlayerById(i).getLevelsCompleted());
+                Player currentPlayer = this.playerRepo.getPlayerById(i);
+                String currentRow = currentPlayer.getName() + "  "
+                        + currentPlayer.getLevelsCompleted() + "  "
+                        + currentPlayer.getCurrentSpaceship();
+                this.addRows(currentRow);
             } else {
                 this.addRows("empty slot");
             }
@@ -107,12 +93,11 @@ public class LoadMenu extends Menu {
         return true;
     }
 
-    private Level getCurrentPlayerLevel(Player player) {
-        Level levelForLoading = null;
-        if (player.getLevelsCompleted() == 1) {
-            levelForLoading = new FirstLevel();
+    private void loadPlayer(int currentRow) {
+        if (isFileExist(currentRow)) {
+            this.player = playerRepo.getPlayerById(currentRow);
+            PhaseManager.setCurrentPlayer(this.player);
+            PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
         }
-        //TODO : For other levels
-        return levelForLoading;
     }
 }
