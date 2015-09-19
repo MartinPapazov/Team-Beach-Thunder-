@@ -3,6 +3,7 @@ package models.spaceships.enemySpaceships;
 import graphics.Assets;
 import models.spaceships.Spaceship;
 import models.spaceships.weapons.LaserLauncher;
+import models.spaceships.weapons.LaserMachineGun;
 
 public class NightRider extends Spaceship {
     private static final String NightRiderName = "Night Rider";
@@ -16,7 +17,7 @@ public class NightRider extends Spaceship {
         super(NightRiderName, x, y, NightRiderWidth,
                 NightRiderHeight, Assets.nightRiderImage,
                 NightRiderHealth, NightRiderArmor,
-                new LaserLauncher(cooldown, false),
+                new LaserMachineGun(cooldown, false),
                 NightRiderVelocity);
     }
 }
