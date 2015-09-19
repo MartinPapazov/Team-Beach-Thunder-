@@ -28,7 +28,7 @@ public class SecondLevel extends Level {
         this.addEnemySpaceship(
                 new Deathbringer(600, 250, 500),
                 new Deathbringer(400, 250, 180),
-                new NightRider(700, 350, 180),
+                new Deathbringer(700, 350, 180),
                 new Deathbringer(800, 450, 250),
                 new NightRider(500, 100, 160)
         );

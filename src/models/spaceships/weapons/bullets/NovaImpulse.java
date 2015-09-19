@@ -6,7 +6,7 @@ public class NovaImpulse extends Bullet {
     private static final String name = "Nova impulse";
     private static final int width = 40;
     private static final int height = 15;
-    private static final int damage = 400;
+    private static final int damage = 300;
     private static final int speed = 3;
 
     public NovaImpulse(int x, int y, boolean flyingRight) {

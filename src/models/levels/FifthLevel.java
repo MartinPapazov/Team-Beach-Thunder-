@@ -8,15 +8,15 @@ import models.spaceships.enemySpaceships.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-public class ThirdLevel extends Level {
+public class FifthLevel extends Level {
 
-    private static final BufferedImage backgroundImage = Assets.levelThreeBackground;
-    private static final int coins = 1000;
+    private static final BufferedImage backgroundImage = Assets.levelSixBackground;
+    private static final int coins = 1600;
     private final int movementCounter = 150;
 
     private int count;
 
-    public ThirdLevel() {
+    public FifthLevel() {
         super(backgroundImage, coins);
         this.initialization();
         this.count = 0;
@@ -25,10 +25,12 @@ public class ThirdLevel extends Level {
     private void initialization() {
 
         this.addEnemySpaceship(
-                new BlueShip(500, 250, 220),
-                new DragonFighter(700, 450, 130),
-                new Deathbringer(650, 100, 140),
-                new NightRider(600, 250, 45)
+                new Deathbringer(670, 350, 250),
+                new LittleSilver(650, 250, 220),
+                new Deathbringer(600, 200, 260),
+                new DragonFighter(560, 100, 190),
+                new DragonFighter(500, 250, 250),
+                new DragonFighter(800, 400, 270)
         );
     }
 

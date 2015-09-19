@@ -3,10 +3,7 @@ package models.levels;
 import Utilitys.Constants;
 import graphics.Assets;
 import models.spaceships.Spaceship;
-import models.spaceships.enemySpaceships.BlueShip;
-import models.spaceships.enemySpaceships.Deathbringer;
-import models.spaceships.enemySpaceships.LittleSilver;
-import models.spaceships.enemySpaceships.NightRider;
+import models.spaceships.enemySpaceships.*;
 
 import java.awt.image.BufferedImage;
 import java.util.Random;
@@ -29,10 +26,10 @@ public class FourthLevel extends Level {
 
         this.addEnemySpaceship(
                 new Deathbringer(670, 350, 200),
-                new LittleSilver(500, 250, 70),
+                new LittleSilver(500, 250, 170),
                 new BlueShip(350, 200, 60),
-                new NightRider(500, 100, 110),
-                new NightRider(400, 250, 50),
+                new DragonFighter(500, 100, 110),
+                new NightRider(400, 250, 150),
                 new Deathbringer(800, 400, 70)
         );
     }
