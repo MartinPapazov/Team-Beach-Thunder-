@@ -3,6 +3,7 @@ package models.menus;
 import audio.AudioAssets;
 import models.levels.EnemySpaceshipsTestLevel;
 import models.levels.FirstLevel;
+import models.levels.ThirdLevel;
 import phases.*;
 import sun.audio.AudioPlayer;
 
@@ -36,7 +37,7 @@ public class MainMenu extends Menu {
                 AudioPlayer.player.stop(this.menuMusic);
 
                 //TODO: need to be changed! Testing only!
-                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new FirstLevel()));
+                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new ThirdLevel()));
                 break;
             case 2:
                 AudioPlayer.player.stop(this.menuMusic);
