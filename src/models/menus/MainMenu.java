@@ -35,7 +35,7 @@ public class MainMenu extends Menu {
                 AudioPlayer.player.stop(this.menuMusic);
 
                 //TODO: need to be changed! Testing only!
-                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new SixthLevel()));
+                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new NinthLevel()));
                 break;
             case 2:
                 AudioPlayer.player.stop(this.menuMusic);
@@ -45,7 +45,7 @@ public class MainMenu extends Menu {
                 break;
             case 3:
                 AudioPlayer.player.stop(this.menuMusic);
-                PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()));
+                PhaseManager.setCurrentPhase(new PhaseSaveMenu(new SaveMenu()));
                 break;
             case 4:
                 AudioPlayer.player.stop(this.menuMusic);
