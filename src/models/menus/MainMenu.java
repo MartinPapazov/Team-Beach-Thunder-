@@ -46,6 +46,7 @@ public class MainMenu extends Menu {
                 break;
             case 3:
                 AudioPlayer.player.stop(this.menuMusic);
+                PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()));
                 break;
             case 4:
                 AudioPlayer.player.stop(this.menuMusic);
