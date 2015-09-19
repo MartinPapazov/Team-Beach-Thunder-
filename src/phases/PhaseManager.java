@@ -31,7 +31,11 @@ public class PhaseManager {
         //    currentPlayer = new Player();
         //}
 
+<<<<<<< HEAD
         return new Player("Gosho", new Spacecruiser(50, 50), new ArrayList<>(),5,5,"-");
+=======
+        return new Player("", new BlackViper(50, 50), new ArrayList<>(),5,5,"-");
+>>>>>>> 5ac92e8b468bb9054c7890d8be964e74751406b2
         //TODO: return currentPlayer;
     }
 
