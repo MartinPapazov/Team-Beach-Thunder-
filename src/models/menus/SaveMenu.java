@@ -2,13 +2,11 @@ package models.menus;
 
 import PlayerData.PlayerRepository;
 import models.Player;
-import models.spaceships.Spaceship;
-import models.spaceships.playerSpaceships.Spacecruiser;
 import phases.PhaseManager;
 import phases.PhaseMenu;
 
+import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class SaveMenu extends Menu {
 
@@ -72,8 +70,8 @@ public class SaveMenu extends Menu {
         String level = "LEVEL";
         //String coins = "COINS";
         String lastPlayed = "LAST SAVE";
-        String tableTitle = String.format("%-12s%-7s%s",nickname,level,lastPlayed);
-        graphics.drawString(tableTitle,50, 135);
+        String tableTitle = String.format("%-12s%-7s%s", nickname, level, lastPlayed);
+        graphics.drawString(tableTitle, 50, 135);
 
     }
 
@@ -97,9 +95,26 @@ public class SaveMenu extends Menu {
         this.addRows(BACK);
     }
 
-    private void savePlayer(int currentRow){
+    private void savePlayer(int currentRow) {
         Player currentPlayer = PhaseManager.getCurrentPlayer();
+        String name = currentPlayer.getName();
+
+        if (name.equals(null) || name.equals("")) {
+            currentPlayer.setName(getNameFromUser());
+        }
         this.playerRepository.setPlayerById(currentRow, currentPlayer);
         PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
+    }
+
+    private String getNameFromUser() {
+        JFrame frame = new JFrame();
+
+        String name = JOptionPane.showInputDialog(
+                frame,
+                "Please, enter your nickname",
+                "Nickname",
+                JOptionPane.INFORMATION_MESSAGE);
+
+        return name;
     }
 }

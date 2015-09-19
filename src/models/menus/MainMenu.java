@@ -40,7 +40,7 @@ public class MainMenu extends Menu {
             case 2:
                 AudioPlayer.player.stop(this.menuMusic);
                 //Testing only
-                PhaseManager.setCurrentPhase(new PhaseMenu(new LoadMenu()) {
+                PhaseManager.setCurrentPhase(new PhaseLoadMenu(new LoadMenu()) {
                 });
                 break;
             case 3:
