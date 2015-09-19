@@ -14,6 +14,7 @@ public class Assets {
     public static BufferedImage backgroundImage;
     public static BufferedImage levelOneBackground;
     public static BufferedImage levelTwoBackground;
+    public static BufferedImage levelThreeBackground;
     public static BufferedImage levelFourBackground;
 
 
@@ -51,6 +52,7 @@ public class Assets {
         missileImage = ImageLoader.loadImage("/images/missile.png");
         levelOneBackground =  ImageLoader.loadImage("/images/LevelOneBackground.jpg");
         levelTwoBackground = ImageLoader.loadImage("/images/LevelTwoBackground.jpg");
+        levelThreeBackground = ImageLoader.loadImage("/images/ThirdLevelBackground.jpg");
         levelFourBackground = ImageLoader.loadImage("/images/LevelFourrBackground.jpg");
         deathbringerImage =  ImageLoader.loadImage("/images/Deathbringer.png");
         nightRiderImage = ImageLoader.loadImage("/images/NightRaider.png");
