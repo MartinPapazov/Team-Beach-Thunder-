@@ -2,6 +2,7 @@ package models.menus;
 
 
 import PlayerData.PlayerRepository;
+import Utilitys.Constants;
 import models.Player;
 import phases.PhaseManager;
 import phases.PhaseMenu;
@@ -64,7 +65,10 @@ public class LoadMenu extends Menu {
 
     @Override
     public void render(Graphics graphics) {
-
+        graphics.setColor(Color.YELLOW);
+        graphics.setFont(new Font("Monospaced", 0, 25));
+        String tableTitle = "nickname           level   coins   last time played";
+        graphics.drawString(tableTitle,50, 135);
     }
 
     @Override
