@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="Added PhaseLoadMenu class for render LoadMenu&#10;and added JOptionPane for entering nickname&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/phases/PhaseLoadMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/PlayerFiles/1.txt" afterPath="$PROJECT_DIR$/resources/PlayerFiles/1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/menus/MainMenu.java" afterPath="$PROJECT_DIR$/src/models/menus/MainMenu.java" />
+    <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/phases/PhaseManager.java" afterPath="$PROJECT_DIR$/src/phases/PhaseManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/menus/SaveMenu.java" afterPath="$PROJECT_DIR$/src/models/menus/SaveMenu.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Team-Beach-Thunder-.iws" />
@@ -29,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PhaseManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PhaseManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.74689823">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -59,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhaseLoadMenu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PhaseLoadMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/phases/PhaseLoadMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3325062">
+            <state vertical-scroll-proportion="0.0">
               <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -211,8 +207,8 @@
         <option value="$PROJECT_DIR$/src/phases/PhaseMenu.java" />
         <option value="$PROJECT_DIR$/src/models/menus/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/phases/PhaseLoadMenu.java" />
-        <option value="$PROJECT_DIR$/src/phases/PhaseManager.java" />
         <option value="$PROJECT_DIR$/src/models/menus/SaveMenu.java" />
+        <option value="$PROJECT_DIR$/src/phases/PhaseManager.java" />
       </list>
     </option>
   </component>
@@ -786,7 +782,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442668547261</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added PhaseLoadMenu class for render LoadMenu&#10;and added JOptionPane for entering nickname&#10;">
+      <created>1442680590551</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1442680590551</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1219,14 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/menus/LoadMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1249,11 +1243,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/phases/PhaseLoadMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325062">
+        <state vertical-scroll-proportion="0.0">
           <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/phases/PhaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74689823">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -31,7 +31,7 @@ public class PhaseManager {
         //    currentPlayer = new Player();
         //}
 
-        return new Player("Pesho", new BlackViper(50, 50), new ArrayList<>(),5,5,"-");
+        return new Player("", new BlackViper(50, 50), new ArrayList<>(),5,5,"-");
         //TODO: return currentPlayer;
     }
 
