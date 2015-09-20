@@ -4,21 +4,36 @@ import models.spaceships.Spaceship;
 import models.spaceships.playerSpaceships.BlackViper;
 import models.spaceships.playerSpaceships.RH5;
 import models.spaceships.playerSpaceships.Spacecruiser;
+import phases.PhaseInventory;
+import phases.PhaseLevelGameplay;
+import phases.PhaseManager;
 
 public class SpaceshipInventory extends Inventory {
 
+    private static final int defaultX = 50;
+    private static final int defaultY = 250;
+    private  Spaceship[][] spaceships;
+
+    public SpaceshipInventory() {
+        super();
+
+    }
     @Override
     public void enter() {
-        System.out.println("work");
+        Spaceship spaceship = this.spaceships[this.getCurrentCol()][this.getCurrentRow()];
+        PhaseManager.getCurrentPlayer().setCurrentSpaceship(spaceship);
+
+        PhaseManager.setCurrentPhase(new PhaseInventory(new LevelInventory()));
     }
 
     @Override
     protected void initialization() {
-        Spaceship[][] spaceships = new Spaceship[3][3];
-        spaceships[0][0] = new Spacecruiser(50,50);
-        spaceships[0][1] = new BlackViper(50,50);
-        spaceships[0][2] = new RH5(50, 50);
+        this.spaceships = new Spaceship[3][3];
+        this.spaceships[0][0] = new Spacecruiser(defaultX,defaultY);
+        this.spaceships[0][1] = new BlackViper(defaultX,defaultY);
+        this.spaceships[0][2] = new RH5(defaultX, defaultY);
 
         this.addObjectsToInformationalInventory(spaceships);
     }
+
 }

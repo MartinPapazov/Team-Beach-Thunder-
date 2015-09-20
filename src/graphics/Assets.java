@@ -1,12 +1,6 @@
 package graphics;
 
-import audio.AudioLoader;
-import jdk.internal.util.xml.impl.Input;
-import sun.audio.AudioData;
-
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.InputStream;
 
 public class Assets {
 

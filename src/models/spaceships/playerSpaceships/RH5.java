@@ -9,7 +9,7 @@ import models.spaceships.weapons.bullets.FireLaser;
 
 public class RH5 extends Spaceship {
 
-    private static final String name = "Black Viper";
+    private static final String name = "RH5";
     private static final int width = 90;
     private static final int height = 70;
     private static final int health = 300;

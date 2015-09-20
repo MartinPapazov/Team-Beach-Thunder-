@@ -27,13 +27,11 @@ public class PhaseManager {
     }
 
     public static Player getCurrentPlayer() {
-        //if (currentPlayer == null) {
-        //    currentPlayer = new Player();
-        //}
+        if (currentPlayer == null) {
+            currentPlayer = new Player();
+        }
 
-        return new Player("Gosho", new Spacecruiser(50, 50), new ArrayList<>(),5,5,"-");
-
-        //TODO: return currentPlayer;
+        return currentPlayer;
     }
 
     public static void setCurrentPlayer(Player player) {
