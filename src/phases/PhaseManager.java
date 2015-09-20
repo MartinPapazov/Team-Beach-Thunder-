@@ -31,7 +31,8 @@ public class PhaseManager {
         //    currentPlayer = new Player();
         //}
 
-        return new Player("Gosho", new BlackViper(50, 50), new ArrayList<>(),5,5);
+        return new Player("Gosho", new Spacecruiser(50, 50), new ArrayList<>(),5,5,"-");
+
         //TODO: return currentPlayer;
     }
 

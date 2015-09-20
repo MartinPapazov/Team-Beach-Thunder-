@@ -2,6 +2,7 @@ package models.menus;
 
 
 import PlayerData.PlayerRepository;
+import Utilitys.Constants;
 import models.Player;
 import phases.PhaseManager;
 import phases.PhaseMenu;
@@ -44,12 +45,15 @@ public class LoadMenu extends Menu {
             case 4:
                 loadPlayer(4);
                 break;
+
             case 5:
                 loadPlayer(5);
                 break;
+
             case 6:
                 loadPlayer(6);
                 break;
+
             case 7:
                 PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
                 break;
@@ -64,6 +68,14 @@ public class LoadMenu extends Menu {
 
     @Override
     public void render(Graphics graphics) {
+        graphics.setColor(Color.YELLOW);
+        //graphics.setFont(new Font("Monospaced", 0, 25));
+        String nickname = "NICKNAME";
+        String level = "LEVEL";
+        //String coins = "COINS";
+        String lastPlayed = "LAST SAVE";
+        String tableTitle = String.format("%-12s%-7s%s",nickname,level,lastPlayed);
+        graphics.drawString(tableTitle,50, 135);
 
     }
 
@@ -75,7 +87,13 @@ public class LoadMenu extends Menu {
             if (player == null) {
                 this.addRows("empty slot");
             } else {
-                this.addRows(player.getName());
+
+                String playerInfo = String.format("%-12s%-7s%s",
+                        player.getName(),
+                        player.getLevelsCompleted(),
+                        player.getLastSave()
+                        );
+                this.addRows(playerInfo);
             }
         }
 
