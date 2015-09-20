@@ -10,7 +10,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DDLazer extends Weapon implements ActionListener {
+//Double Double Laser
+public class DDLaser extends Weapon implements ActionListener {
     //Positions where bullets will be launch
     private final int yBlueLazer1;
     private final int yBlueLazer2;
@@ -20,7 +21,7 @@ public class DDLazer extends Weapon implements ActionListener {
     private int currentX;
     private int currentY;
 
-    public DDLazer(int cooldown, boolean shootingRight, int yBLazer1, int yBLazer2, int yRLazer1, int yRLazer2) {
+    public DDLaser(int cooldown, boolean shootingRight, int yBLazer1, int yBLazer2, int yRLazer1, int yRLazer2) {
         super(cooldown, shootingRight);
         this.redLazersShootTimer = new Timer(2000, this);
         this.yBlueLazer1 = yBLazer1;

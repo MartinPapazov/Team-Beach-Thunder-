@@ -27,6 +27,8 @@ public class Assets {
     public static BufferedImage spacecruiserImage;
     public static BufferedImage blackViperImage;
     public static BufferedImage RH5SpaceshipImage;
+    public static BufferedImage downFighterImage;
+    public static BufferedImage moonStalkerImage;
 
     //Enemy spaceships
     public static BufferedImage deathbringerImage;
@@ -48,6 +50,7 @@ public class Assets {
     public static BufferedImage mediumNovaImage;
     public static BufferedImage novaImpulseImage;
     public static BufferedImage auroraTearImage;
+    public static BufferedImage superNovaImage;
 
 
 
@@ -78,6 +81,9 @@ public class Assets {
         auroraTearImage = ImageLoader.loadImage("/images/AuroraTear.png");
         dragonScoutImage = ImageLoader.loadImage("/images/DragonScout.png");
         dragonReaperImage = ImageLoader.loadImage("/images/DragonReaper.png");
+        downFighterImage = ImageLoader.loadImage("/images/DownFighter.png");
+        moonStalkerImage = ImageLoader.loadImage("/images/MoonStalker.png");
+        superNovaImage = ImageLoader.loadImage("/images/SuperNova.png");
         redLaserImage = spriteSheet.crop(0, 224, 256, 16);
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
