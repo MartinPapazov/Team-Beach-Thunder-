@@ -99,6 +99,4 @@ public class Assets {
         padlockImage = ImageLoader.loadImage("/images/Padlock.png");
         inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
     }
-
-
 }
