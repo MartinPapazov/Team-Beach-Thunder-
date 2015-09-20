@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graphics/Assets.java" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/spaceships/weapons/AuroraTripleShot.java" afterPath="$PROJECT_DIR$/src/models/spaceships/weapons/AuroraTripleShot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/spaceships/enemySpaceships/DragonDestroyer.java" afterPath="$PROJECT_DIR$/src/models/spaceships/enemySpaceships/DragonDestroyer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/levels/EnemySpaceshipsTestLevel.java" afterPath="$PROJECT_DIR$/src/models/levels/EnemySpaceshipsTestLevel.java" />
-    </list>
+    <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="" />
     <ignored path="Team-Beach-Thunder-.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
