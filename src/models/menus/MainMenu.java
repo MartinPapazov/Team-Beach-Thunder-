@@ -1,6 +1,7 @@
 package models.menus;
 
 import audio.AudioAssets;
+import models.inventorys.SpaceshipInventory;
 import models.levels.*;
 import phases.*;
 import sun.audio.AudioPlayer;
@@ -49,7 +50,7 @@ public class MainMenu extends Menu {
                 break;
             case 4:
                 AudioPlayer.player.stop(this.menuMusic);
-                PhaseManager.setCurrentPhase(new PhaseMenu(new PurchaseSpaceshipMenu()));
+                PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
                 break;
             case 5:
                 AudioPlayer.player.stop(this.menuMusic);

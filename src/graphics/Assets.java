@@ -21,6 +21,9 @@ public class Assets {
     public static BufferedImage levelSevenBackground;
     public static BufferedImage levelEightBackground;
     public static BufferedImage levelNineBackground;
+    public static BufferedImage inventoryObjectsBackground;
+    public static BufferedImage inventoryBoltImage;
+    public static BufferedImage padlockImage;
 
 
     //Player spaceships
@@ -86,6 +89,9 @@ public class Assets {
         fireLaserImage = spriteSheet.crop(0, 240, 256, 16);
         flameStrikeImage = ImageLoader.loadImage("/images/FlameStrike.png");
         littleSilverShipImage = ImageLoader.loadImage("/images/LittleSilver.png");
+        inventoryObjectsBackground = ImageLoader.loadImage("/images/metalBackgroundInventory.jpg");
+        padlockImage = ImageLoader.loadImage("/images/Padlock.png");
+        inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
     }
 
 
