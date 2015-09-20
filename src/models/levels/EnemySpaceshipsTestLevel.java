@@ -22,11 +22,12 @@ public class EnemySpaceshipsTestLevel extends Level {
     }
 
     private void initialization() {
-        this.addEnemySpaceship(new Deathbringer(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
-        this.addEnemySpaceship(new NightRider(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
-        this.addEnemySpaceship(new BlueShip(Constants.WindowHeight - 100, Constants.WindowWidth / 2, 300));
-        this.addEnemySpaceship(new LittleSilver(Constants.WindowHeight - 50, Constants.WindowWidth / 2, 400));
-        this.addEnemySpaceship(new DragonFighter(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 800));
+        //this.addEnemySpaceship(new Deathbringer(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
+     //   this.addEnemySpaceship(new NightRider(Constants.WindowHeight - 200, Constants.WindowWidth / 2, 500));
+//        this.addEnemySpaceship(new BlueShip(Constants.WindowHeight - 100, Constants.WindowWidth / 2, 300));
+//        this.addEnemySpaceship(new LittleSilver(Constants.WindowHeight - 50, Constants.WindowWidth / 2, 400));
+//       this.addEnemySpaceship(new DragonFighter(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 800));
+        this.addEnemySpaceship(new DragonDestroyer(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 500));
     }
 
     @Override
