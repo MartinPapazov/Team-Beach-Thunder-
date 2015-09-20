@@ -21,6 +21,9 @@ public class Assets {
     public static BufferedImage levelSevenBackground;
     public static BufferedImage levelEightBackground;
     public static BufferedImage levelNineBackground;
+    public static BufferedImage inventoryObjectsBackground;
+    public static BufferedImage inventoryBoltImage;
+    public static BufferedImage padlockImage;
 
 
     //Player spaceships
@@ -35,6 +38,8 @@ public class Assets {
     public static BufferedImage littleSilverShipImage;
     public static BufferedImage dragonFighterImage;
     public static BufferedImage dragonDestroyerImage;
+    public static BufferedImage dragonScoutImage;
+    public static BufferedImage dragonReaperImage;
 
     //Bullets
     public static BufferedImage missileImage;
@@ -74,6 +79,8 @@ public class Assets {
         dragonFighterImage = ImageLoader.loadImage("/images/DragonFighter.png");
         dragonDestroyerImage = ImageLoader.loadImage("/images/DragonDestroyer.png");
         auroraTearImage = ImageLoader.loadImage("/images/AuroraTear.png");
+        dragonScoutImage = ImageLoader.loadImage("/images/DragonScout.png");
+        dragonReaperImage = ImageLoader.loadImage("/images/DragonReaper.png");
         redLaserImage = spriteSheet.crop(0, 224, 256, 16);
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
@@ -82,6 +89,9 @@ public class Assets {
         fireLaserImage = spriteSheet.crop(0, 240, 256, 16);
         flameStrikeImage = ImageLoader.loadImage("/images/FlameStrike.png");
         littleSilverShipImage = ImageLoader.loadImage("/images/LittleSilver.png");
+        inventoryObjectsBackground = ImageLoader.loadImage("/images/metalBackgroundInventory.jpg");
+        padlockImage = ImageLoader.loadImage("/images/Padlock.png");
+        inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
     }
 
 

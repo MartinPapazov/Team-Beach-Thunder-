@@ -11,15 +11,17 @@ import java.awt.event.ActionListener;
 
 
 public class AuroraTripleShot extends Weapon implements ActionListener {
-
+    //Position where bullet will be launch
+    private final int yPositionOnShip;
     private Timer tripleShootTimer;
     private int currentX;
     private int currentY;
     private int shootCounter;
 
-    public AuroraTripleShot(int cooldown, boolean shootingRight) {
+    public AuroraTripleShot(int cooldown, boolean shootingRight, int yPositionOnShip) {
         super(cooldown, shootingRight);
         this.tripleShootTimer = new Timer(200, this);
+        this.yPositionOnShip = yPositionOnShip;
     }
 
     @Override
@@ -36,7 +38,7 @@ public class AuroraTripleShot extends Weapon implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Bullet tear = new AuroraTear(this.currentX, this.currentY + 18, this.shootingRight);
+        Bullet tear = new AuroraTear(this.currentX, this.currentY + yPositionOnShip, this.shootingRight);
         this.addBullet(tear);
         shootCounter++;
         if (shootCounter == 3) {
