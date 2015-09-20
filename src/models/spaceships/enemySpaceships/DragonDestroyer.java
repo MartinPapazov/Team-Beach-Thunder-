@@ -16,7 +16,7 @@ public class DragonDestroyer extends Spaceship {
         super(ShipName, x, y, ShipWidth,
                 ShipHeight, Assets.dragonDestroyerImage,
                 ShipHealth, ShipArmor,
-                new AuroraTripleShot(cooldown, false),
+                new AuroraTripleShot(cooldown, false, 18),
                 ShipVelocity);
     }
 }
