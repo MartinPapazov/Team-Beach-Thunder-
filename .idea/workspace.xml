@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/graphics/Assets.java" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/spaceships/enemySpaceships/DragonReaper.java" afterPath="$PROJECT_DIR$/src/models/spaceships/enemySpaceships/DragonReaper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Lessons\SoftUniTeamProjects\BeachThunder\Team-Beach-Thunder-\resources\images\downfighter.png" afterPath="$PROJECT_DIR$/resources/images/DownFighter.png" />
-      <change type="MOVED" beforePath="D:\Lessons\SoftUniTeamProjects\BeachThunder\Team-Beach-Thunder-\src\models\spaceships\weapons\DDLazer.java" afterPath="$PROJECT_DIR$/src/models/spaceships/weapons/DDLaser.java" />
-    </list>
+    <list default="true" id="b43e065b-a4f0-4e91-8743-20f3299437b2" name="Default" comment="" />
     <ignored path="Team-Beach-Thunder-.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,8 +35,8 @@
       <file leaf-file-name="Assets.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/graphics/Assets.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3448276">
-              <caret line="85" column="65" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.8559671">
+              <caret line="91" column="65" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -74,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/models/menus/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+              <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -196,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/models/spaceships/weapons/DDLazer.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/weapons/RedLazerShoot.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/enemySpaceships/DragonScout.java" />
-        <option value="$PROJECT_DIR$/src/graphics/Assets.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/weapons/bullets/SuperNova.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/weapons/bullets/SuperNovaShoot.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/weapons/PDDLazer.java" />
@@ -208,6 +201,7 @@
         <option value="$PROJECT_DIR$/src/models/spaceships/playerSpaceships/MoonStalker.java" />
         <option value="$PROJECT_DIR$/src/models/spaceships/weapons/PDDLaser.java" />
         <option value="$PROJECT_DIR$/src/phases/PhaseManager.java" />
+        <option value="$PROJECT_DIR$/src/graphics/Assets.java" />
       </list>
     </option>
   </component>
@@ -493,15 +487,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/PlayerFiles/1.txt</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/images/ThirdLevelBackground.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/levels/SecondLevel.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/levels/ThirdLevel.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/game/InputHandlers/MenuInputHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/graphics/Assets.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/menus/MainMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/menus/SaveMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/spaceships/enemySpaceships/NightRider.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/spaceships/weapons/NovaShock.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/phases/PhaseManager.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -509,8 +497,13 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/phases/PhaseLoadMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/phases/PhaseSaveMenu.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/images/Padlock.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/images/metalBackgroundInventory.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/images/metalBoltInventoryImage.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/game/InputHandlers/InventoryInputHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/inventorys/Inventory.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/inventorys/SpaceshipInventory.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/phases/PhaseInventory.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -518,7 +511,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/images/FinalLevelBackground.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/game/InputHandlers/StoreHandler.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/menus/PurchaseSpaceshipMenu.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/menus/SpaceshipStoreMenu.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/menus/Store.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -828,8 +824,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942238" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32073012" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32985657" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32073012" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.196875" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1245,7 +1241,7 @@
     <entry file="file://$PROJECT_DIR$/src/models/menus/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+          <caret line="60" column="55" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -1335,8 +1331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/graphics/Assets.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3448276">
-          <caret line="85" column="65" selection-start-line="85" selection-start-column="65" selection-end-line="85" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.8559671">
+          <caret line="91" column="65" selection-start-line="91" selection-start-column="65" selection-end-line="91" selection-end-column="65" />
           <folding />
         </state>
       </provider>
