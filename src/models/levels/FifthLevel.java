@@ -17,8 +17,8 @@ public class FifthLevel extends Level {
     private Spaceship dragonDestroyer2 = new DragonDestroyer(800, 30, 70);
     private Spaceship dragonScout1 = new DragonScout(700, 480, 100);
     private Spaceship dragonScout2 = new DragonScout(700, 30, 90);
-    private Spaceship littleSilver1 = new LittleSilver(600, 480, 1200);
-    private Spaceship littleSilver2 = new LittleSilver(600, 30, 120);
+    private Spaceship littleSilver1 = new LittleSilver(600, 480, 120);
+    private Spaceship littleSilver2 = new LittleSilver(600, 30, 110);
 
 
     public FifthLevel() {
