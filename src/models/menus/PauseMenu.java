@@ -48,7 +48,7 @@ public class PauseMenu extends Menu {
 
     @Override
     public void render(Graphics graphics) {
-
+        super.render(graphics);
     }
 
     @Override
