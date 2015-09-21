@@ -153,5 +153,6 @@ public abstract class Inventory {
     }
 
     public abstract void enter();
+    public abstract void getBack();
     protected abstract void initialization();
 }

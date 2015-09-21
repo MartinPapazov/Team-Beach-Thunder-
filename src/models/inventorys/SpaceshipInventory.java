@@ -2,11 +2,13 @@ package models.inventorys;
 
 import display.Display;
 import models.Player;
+import models.menus.MainMenu;
 import models.spaceships.Spaceship;
 import models.spaceships.playerSpaceships.*;
 import phases.PhaseInventory;
 import phases.PhaseLevelGameplay;
 import phases.PhaseManager;
+import phases.PhaseMenu;
 
 import javax.swing.*;
 import java.awt.image.BufferedImage;
@@ -34,6 +36,12 @@ public class SpaceshipInventory extends Inventory {
 
         this.buySpaceship(spaceship);
 
+    }
+
+    @Override
+    public void getBack() {
+        PhaseManager.setCurrentPhase(new PhaseMenu(new MainMenu()));
+        Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
     }
 
     @Override
@@ -69,6 +77,7 @@ public class SpaceshipInventory extends Inventory {
                 int playerLeftCoins = player.getCoins() - spaceship.getCoins();
                 player.addNewSpaceShip(spaceship.getName());
                 player.setCoins(playerLeftCoins);
+                this.getLocks()[this.getCurrentCol()][this.getCurrentRow()] = true;
             }
         }
     }

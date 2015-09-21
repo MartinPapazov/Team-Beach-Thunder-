@@ -2,6 +2,7 @@ package models.inventorys;
 
 import display.Display;
 import models.levels.*;
+import phases.PhaseInventory;
 import phases.PhaseLevelGameplay;
 import phases.PhaseManager;
 
@@ -15,6 +16,12 @@ public class LevelInventory extends Inventory {
         PhaseManager.setCurrentPhase(new PhaseLevelGameplay(level));
         Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
 
+    }
+
+    @Override
+    public void getBack() {
+        PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
+        Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
     }
 
     @Override
