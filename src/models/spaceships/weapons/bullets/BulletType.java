@@ -1,5 +1,5 @@
 package models.spaceships.weapons.bullets;
 
 public enum  BulletType {
-    RedLaser, GreenLaser, Missile
+    RedLaser, GreenLaser, MediumNova, Missile
 }

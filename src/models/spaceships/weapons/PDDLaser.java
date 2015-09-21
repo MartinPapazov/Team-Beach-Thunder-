@@ -2,6 +2,7 @@ package models.spaceships.weapons;
 
 import audio.AudioAssets;
 import models.spaceships.weapons.bullets.*;
+import sun.audio.AudioPlayer;
 
 public class PDDLaser extends Weapon {
     //Positions where bullets will be launch
@@ -25,14 +26,14 @@ public class PDDLaser extends Weapon {
     public void shoot(int x, int y) {
         if (this.cooldownCounter >= this.cooldown) {
             if (this.lastBulletShot == BulletType.GreenLaser) {
-                // AudioPlayer.player.start(AudioAssets.getSpaceshipLasserFourAudiInputStream());
+                AudioPlayer.player.start(AudioAssets.getSpaceshipBigLasserOneAudiInputStream());
                 Bullet redLaser1 = new RedLaser(x + xLaser, y + this.yRedLaser1, this.shootingRight);
                 Bullet redLaser2 = new RedLaser(x + xLaser, y + this.yRedLaser2, this.shootingRight);
                 this.addBullet(redLaser1);
                 this.addBullet(redLaser2);
                 this.lastBulletShot = BulletType.RedLaser;
             } else {
-                // AudioPlayer.player.start(AudioAssets.getSpaceshipLasserFourAudiInputStream());
+                AudioPlayer.player.start(AudioAssets.getSpaceshipBigLasserOneAudiInputStream());
                 Bullet greenLaser1 = new GreenLaser(x + xLaser, y + yGreenLaser1, this.shootingRight);
                 Bullet greenLaser2 = new GreenLaser(x + xLaser, y + yGreenLaser2, this.shootingRight);
                 this.addBullet(greenLaser1);

@@ -10,8 +10,8 @@ public class Spacecruiser extends Spaceship {
     private static final String name = "Spacecruiser";
     private static final int width = 70;
     private static final int height = 60;
-    private static final int health = 500;
-    private static final int armor = 700;
+    private static final int health = 1500;
+    private static final int armor = 1700;
     private static final Weapon weapon = new MissileLauncher(200, true);
     private static final int velocity = 3;
 

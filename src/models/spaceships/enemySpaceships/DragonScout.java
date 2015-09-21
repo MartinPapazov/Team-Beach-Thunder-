@@ -2,7 +2,7 @@ package models.spaceships.enemySpaceships;
 
 import graphics.Assets;
 import models.spaceships.Spaceship;
-import models.spaceships.weapons.RedLazerShoot;
+import models.spaceships.weapons.RedLaserShoot;
 
 public class DragonScout extends Spaceship {
     private static final String ShipName = "Dragon Scout";
@@ -16,7 +16,7 @@ public class DragonScout extends Spaceship {
         super(ShipName, x, y, ShipWidth,
                 ShipHeight, Assets.dragonScoutImage,
                 ShipHealth, ShipArmor,
-                new RedLazerShoot(cooldown, false, 20),
+                new RedLaserShoot(cooldown, false, 20),
                 ShipVelocity);
     }
 }
