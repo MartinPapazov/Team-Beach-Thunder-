@@ -16,7 +16,7 @@ public class EnemySpaceshipsTestLevel extends Level {
     private int count;
 
     public EnemySpaceshipsTestLevel() {
-        super(backgroundImage, coins);
+        super(backgroundImage, coins,6);
         this.initialization();
         this.count = 0;
     }

@@ -17,7 +17,7 @@ public class FourthLevel extends Level {
     private int count;
 
     public FourthLevel() {
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 4);
         this.initialization();
         this.count = 0;
     }

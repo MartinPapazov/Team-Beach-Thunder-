@@ -20,7 +20,7 @@ public class SeventhLevel extends Level {
 
     public SeventhLevel() {
 
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 7);
         this.initialization();
         this.count = 0;
     }

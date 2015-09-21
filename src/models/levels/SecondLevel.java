@@ -19,7 +19,7 @@ public class SecondLevel extends Level {
     private int count;
 
     public SecondLevel(){
-        super(backgroundImage,coins);
+        super(backgroundImage,coins, 2);
         this.initialization();
         this.count = 0;
     }

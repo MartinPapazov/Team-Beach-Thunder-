@@ -7,19 +7,22 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public abstract class Level implements Informational{
 
     private BufferedImage backgroundImage;
     private ArrayList<Spaceship> enemys;
+    private int level;
     private int coinsPerLevel;
 
-    protected Level(BufferedImage image, int coinsPerLevel) {
+    protected Level(BufferedImage image, int coinsPerLevel, int level) {
         //TODO: Add name in constructor and as a field.
         this.backgroundImage = image;
         this.enemys = new ArrayList<>();
         this.coinsPerLevel = coinsPerLevel;
+        this.level = level;
     }
 
     public int getCoinsPerLevel() {
@@ -48,8 +51,12 @@ public abstract class Level implements Informational{
     }
 
     public Map<String, String> getInformationAboutObject() {
-        //TODO: Implement this method.
-        return new HashMap<>();
+        Map<String, String> info = new LinkedHashMap<>();
+        String level = Integer.toString(this.level);
+        String coins = Integer.toString(this.coinsPerLevel);
+        info.put("Level:", level);
+        info.put("Reward:", coins + " coins.");
+        return info;
     }
 
     protected void addEnemySpaceship(Spaceship... spaceships) {

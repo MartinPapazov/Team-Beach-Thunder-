@@ -6,6 +6,7 @@ import contracts.Informational;
 import game.InputHandlers.InputHandler;
 import game.InputHandlers.InventoryInputHandler;
 import graphics.Assets;
+import phases.PhaseManager;
 import sun.audio.AudioPlayer;
 
 import java.awt.*;
@@ -150,6 +151,12 @@ public abstract class Inventory {
                 count++;
             }
         }
+
+        graphics.setFont(new Font("Palatino", 2, 15));
+        graphics.drawImage(Assets.statusBarImage, 0, 0, Constants.WindowWidth, Constants.GameStatusBar, null);
+        graphics.setColor(Color.black);
+        graphics.drawString("Name: " + PhaseManager.getCurrentPlayer().getName(), 10, 22);
+        graphics.drawString("Coins: " + PhaseManager.getCurrentPlayer().getCoins(), 200, 22);
     }
 
     public abstract void enter();

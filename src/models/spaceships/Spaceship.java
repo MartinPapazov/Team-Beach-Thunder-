@@ -195,12 +195,14 @@ public abstract class Spaceship extends GameObject implements Informational{
         String armor = Integer.toString(this.getArmor());
         String damage = Integer.toString(this.getWeapon().getDamage());
         String speed = Integer.toString(this.getVelocity());
+        String coins = Integer.toString(this.getCoins());
         Map<String, String> info = new LinkedHashMap<>();
         info.put("Name:", name);
         info.put("Health:", health);
         info.put("Armor:", armor);
         info.put("Damage:", damage);
         info.put("Speed:", speed);
+        info.put("Coins:", coins);
         return info;
     }
 

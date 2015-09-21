@@ -21,7 +21,7 @@ public class EigthLevel extends Level {
 
     public EigthLevel() {
 
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 8);
         this.initialization();
         this.count = 0;
     }

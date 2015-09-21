@@ -1,5 +1,6 @@
 package graphics;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Assets {
@@ -18,6 +19,7 @@ public class Assets {
     public static BufferedImage inventoryObjectsBackground;
     public static BufferedImage inventoryBoltImage;
     public static BufferedImage padlockImage;
+    public static BufferedImage statusBarImage;
 
 
     //Player spaceships
@@ -94,5 +96,6 @@ public class Assets {
         inventoryObjectsBackground = ImageLoader.loadImage("/images/metalBackgroundInventory.jpg");
         padlockImage = ImageLoader.loadImage("/images/Padlock.png");
         inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
+        statusBarImage = ImageLoader.loadImage("/images/statusBarImage.jpg");
     }
 }

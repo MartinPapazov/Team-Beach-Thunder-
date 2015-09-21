@@ -17,7 +17,7 @@ public class FifthLevel extends Level {
     private int count;
 
     public FifthLevel() {
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 5);
         this.initialization();
         this.count = 0;
     }
