@@ -23,6 +23,7 @@ public abstract class Spaceship extends GameObject implements Informational{
     private int armor;
     private Weapon weapon;
     private int velocity;
+    private int coins;
     private boolean explode;
     public boolean isExploding;
     public boolean isDestroyed;
@@ -30,6 +31,7 @@ public abstract class Spaceship extends GameObject implements Informational{
     public boolean isMovingRight;
     public boolean isMovingUp;
     public boolean isMovingDown;
+
 
     protected Spaceship(String name, int x, int y, int width, int height, BufferedImage objectImage,
                       int health, int armor, Weapon weapon, int velocity) {
@@ -49,6 +51,7 @@ public abstract class Spaceship extends GameObject implements Informational{
         this.setIsDestroyed(false);
         this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 50, false);
         this.explode = true;
+        this.coins = 200;
     }
 
 
@@ -152,6 +155,16 @@ public abstract class Spaceship extends GameObject implements Informational{
 
         this.isMovingDown = isMovingDown;
     }
+
+    private void setCoins(int coins) {
+        this.coins = coins;
+    }
+
+    public int getCoins() {
+        return this.coins;
+    }
+
+
 
     public void fire() {
         this.weapon.shoot(this.getX(), this.getY());

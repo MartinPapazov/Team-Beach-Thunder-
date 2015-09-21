@@ -1,6 +1,5 @@
 package game.InputHandlers;
 
-import display.Display;
 import models.inventorys.Inventory;
 
 import java.awt.event.KeyEvent;
@@ -34,7 +33,6 @@ public class InventoryInputHandler extends InputHandler {
         }
 
         if (keyCode == KeyEvent.VK_ENTER) {
-            Display.getInstance().getCanvas().removeKeyListener(this);
             this.inventory.enter();
         }
     }

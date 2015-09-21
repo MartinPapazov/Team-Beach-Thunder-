@@ -1,15 +1,20 @@
 package models.inventorys;
 
+import display.Display;
 import models.levels.*;
 import phases.PhaseLevelGameplay;
 import phases.PhaseManager;
 
 public class LevelInventory extends Inventory {
     private Level[][] levels;
+
     @Override
     public void enter() {
         Level level = this.levels[this.getCurrentCol()][this.getCurrentRow()];
+
         PhaseManager.setCurrentPhase(new PhaseLevelGameplay(level));
+        Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
+
     }
 
     @Override

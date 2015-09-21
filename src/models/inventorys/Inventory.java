@@ -18,13 +18,14 @@ public abstract class Inventory {
     private int currentRow;
     private int currentCol;
     private boolean[][] locks;
+    private InputHandler handler;
 
     protected Inventory() {
         this.informationals = new Informational[3][3];
         this.currentCol = 0;
         this.currentRow = 0;
         this.initialization();
-        new InventoryInputHandler(this);
+        this.handler = new InventoryInputHandler(this);
     }
 
     public int getCurrentRow() {
@@ -32,7 +33,6 @@ public abstract class Inventory {
     }
 
     public void setCurrentRow(int currentRow) {
-        if (!locks[this.currentCol][currentRow]) return;
         if (currentRow >= 0 && currentRow < 3) {
            AudioPlayer.player.start(AudioAssets.getMenuChoiceSound());
             this.currentRow = currentRow;
@@ -44,11 +44,18 @@ public abstract class Inventory {
     }
 
     public void setCurrentCol(int currentCol) {
-        if (!locks[currentCol][this.currentRow]) return;
         if (currentCol >= 0 && currentCol < 3) {
             AudioPlayer.player.start(AudioAssets.getMenuChoiceSound());
             this.currentCol = currentCol;
         }
+    }
+
+    public InputHandler getHandler() {
+        return handler;
+    }
+
+    public boolean[][] getLocks() {
+        return locks;
     }
 
     protected void addObjectsToInformationalInventory(Informational[][] objects, boolean[][] locks) {
@@ -119,6 +126,7 @@ public abstract class Inventory {
         int infoTableY = 50;
         int infoTableWidth = 250;
         int infoTableHeight = 500;
+
         //Information table
         graphics.setColor(Color.black);
         graphics.fillRect(infoTableX, infoTableY, infoTableWidth, infoTableHeight);

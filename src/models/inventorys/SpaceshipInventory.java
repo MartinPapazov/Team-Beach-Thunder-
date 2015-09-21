@@ -1,5 +1,6 @@
 package models.inventorys;
 
+import display.Display;
 import models.Player;
 import models.spaceships.Spaceship;
 import models.spaceships.playerSpaceships.*;
@@ -7,6 +8,7 @@ import phases.PhaseInventory;
 import phases.PhaseLevelGameplay;
 import phases.PhaseManager;
 
+import javax.swing.*;
 import java.awt.image.BufferedImage;
 
 public class SpaceshipInventory extends Inventory {
@@ -24,8 +26,14 @@ public class SpaceshipInventory extends Inventory {
     public void enter() {
         Spaceship spaceship = this.spaceships[this.getCurrentCol()][this.getCurrentRow()];
         PhaseManager.getCurrentPlayer().setCurrentSpaceship(spaceship);
+        if (this.getLocks()[this.getCurrentCol()][this.getCurrentRow()]) {
+            PhaseManager.setCurrentPhase(new PhaseInventory(new LevelInventory()));
+            Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
+            return;
+        }
 
-        PhaseManager.setCurrentPhase(new PhaseInventory(new LevelInventory()));
+        this.buySpaceship(spaceship);
+
     }
 
     @Override
@@ -47,6 +55,22 @@ public class SpaceshipInventory extends Inventory {
         locks[2][1] = player.getNamesOfOwnedSpaceships().contains("Moon Stalker");
 
         this.addObjectsToInformationalInventory(spaceships, locks);
+    }
+
+    private void buySpaceship(Spaceship spaceship) {
+        String question = "Do you want to buy " + spaceship.getName() + "?";
+        int answer = JOptionPane.showConfirmDialog(null, question, "Confirm payment.", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (answer == JOptionPane.YES_OPTION) {
+            Player player = PhaseManager.getCurrentPlayer();
+            boolean isPlayerHaveEnoughMoney = player.getCoins() < spaceship.getCoins();
+            if (isPlayerHaveEnoughMoney) {
+                JOptionPane.showMessageDialog(null, "You don't have enough money!", "Not enough money!", 1);
+            } else {
+                int playerLeftCoins = player.getCoins() - spaceship.getCoins();
+                player.addNewSpaceShip(spaceship.getName());
+                player.setCoins(playerLeftCoins);
+            }
+        }
     }
 
 }
