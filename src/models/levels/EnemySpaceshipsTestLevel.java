@@ -29,6 +29,8 @@ public class EnemySpaceshipsTestLevel extends Level {
 //       this.addEnemySpaceship(new DragonFighter(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 800));
         //this.addEnemySpaceship(new DragonDestroyer(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 500));
         //this.addEnemySpaceship(new DragonScout(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 500));
+        this.addEnemySpaceship(new DragonReaper(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 100));
+        this.addEnemySpaceship(new DragonDestroyer(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 100));
         this.addEnemySpaceship(new DragonScout(Constants.WindowHeight - 60, Constants.WindowWidth / 2, 100));
     }
 

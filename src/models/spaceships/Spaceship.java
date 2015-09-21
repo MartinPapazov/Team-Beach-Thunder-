@@ -46,7 +46,7 @@ public abstract class Spaceship extends GameObject implements Informational{
         this.setIsMovingUp(false);
         this.setIsExploding(false);
         this.setIsDestroyed(false);
-        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 100, false);
+        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 50, false);
         this.explode = true;
     }
 

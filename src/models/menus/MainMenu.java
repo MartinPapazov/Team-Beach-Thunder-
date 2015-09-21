@@ -17,7 +17,7 @@ public class MainMenu extends Menu {
     private final static String secondLine = "Load game";
     private final static String thirdLine = "Save game";
     private final static String forthLine = "Profile";
-    private final static String fifthLine = "EXIT";
+    private final static String fifthLine = "Quit";
     private final static String testingSpaceships = "Testing enemy spaceships";
 
 
@@ -32,30 +32,28 @@ public class MainMenu extends Menu {
 
         switch (this.getCurrentRow()) {
             case 1:
-
                 PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
                 break;
             case 2:
 
                 //Testing only
-                PhaseManager.setCurrentPhase(new PhaseLoadMenu(new LoadMenu()) {
+                PhaseManager.setCurrentPhase(new PhaseMenu(new LoadMenu()) {
                 });
                 break;
             case 3:
 
-                PhaseManager.setCurrentPhase(new PhaseSaveMenu(new SaveMenu()));
+                PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()));
                 break;
             case 4:
 
                 PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
                 break;
             case 5:
-
                 System.exit(0);
                 break;
             case 6:
 
-                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new EnemySpaceshipsTestLevel()));
+                PhaseManager.setCurrentPhase(new PhaseMenu(new PauseMenu()));
             default:
                 break;
         }
