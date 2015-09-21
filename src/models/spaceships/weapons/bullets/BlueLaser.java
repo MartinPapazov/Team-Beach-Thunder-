@@ -6,7 +6,7 @@ public class BlueLaser extends Bullet {
     private static final String name = "Blue Laser";
     private static final int width = 40;
     private static final int height = 15;
-    private static final int damage = 200;
+    private static final int damage = 100;
     private static final int speed = 6;
 
     public BlueLaser(int x, int y, boolean flyingRight) {

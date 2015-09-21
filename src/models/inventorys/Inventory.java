@@ -1,10 +1,12 @@
 package models.inventorys;
 
 import Utilitys.Constants;
+import audio.AudioAssets;
 import contracts.Informational;
 import game.InputHandlers.InputHandler;
 import game.InputHandlers.InventoryInputHandler;
 import graphics.Assets;
+import sun.audio.AudioPlayer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -15,6 +17,7 @@ public abstract class Inventory {
     private Informational[][] informationals;
     private int currentRow;
     private int currentCol;
+    private boolean[][] locks;
 
     protected Inventory() {
         this.informationals = new Informational[3][3];
@@ -29,7 +32,9 @@ public abstract class Inventory {
     }
 
     public void setCurrentRow(int currentRow) {
+        if (!locks[this.currentCol][currentRow]) return;
         if (currentRow >= 0 && currentRow < 3) {
+           AudioPlayer.player.start(AudioAssets.getMenuChoiceSound());
             this.currentRow = currentRow;
         }
     }
@@ -39,17 +44,16 @@ public abstract class Inventory {
     }
 
     public void setCurrentCol(int currentCol) {
+        if (!locks[currentCol][this.currentRow]) return;
         if (currentCol >= 0 && currentCol < 3) {
+            AudioPlayer.player.start(AudioAssets.getMenuChoiceSound());
             this.currentCol = currentCol;
         }
     }
 
-    protected void addObjectsToInformationalInventory(Informational[][] objects) {
-        for (int i = 0; i < this.informationals.length; i++) {
-            for (int j = 0; j < this.informationals[i].length; j++) {
-                this.informationals[i][j] = objects[i][j];
-            }
-        }
+    protected void addObjectsToInformationalInventory(Informational[][] objects, boolean[][] locks) {
+        this.informationals = objects;
+        this.locks = locks;
     }
 
     public void update() {
@@ -72,6 +76,7 @@ public abstract class Inventory {
                 BufferedImage backgroundImage = Assets.inventoryObjectsBackground;
                 BufferedImage padlockImage = Assets.padlockImage;
                 Informational inform = this.informationals[i][j];
+                boolean isLocked = !this.locks[i][j];
 
 
                 if (currentRow == j && currentCol == i) {
@@ -81,12 +86,32 @@ public abstract class Inventory {
                 }
 
                 graphics.fillRect(currentX, currentY, width, height);
-                graphics.drawImage(backgroundImage, currentX + 5, currentY + 5, width - 10, height - 10, null);
+                graphics.drawImage(
+                        backgroundImage,
+                        currentX + 5,
+                        currentY + 5,
+                        width - 10,
+                        height - 10,
+                        null);
                 if (inform != null) {
-                   graphics.drawImage(inform.getObjectImage(), currentX + 5, currentY + 5, width - 10, height - 10, null);
+                   graphics.drawImage(
+                           inform.getObjectImage(),
+                           currentX + 5,
+                           currentY + 5,
+                           width - 10
+                           , height - 10
+                           , null);
+                    if (isLocked) {
+                        graphics.drawImage(
+                                padlockImage,
+                                currentX + 20,
+                                currentY + 10,
+                                width - 40,
+                                height - 20,
+                                null);
+                    }
                 }
 
-                //graphics.drawImage(padlockImage, currentX + 20, currentY + 10, width - 40, height - 20, null);
             }
         }
 
