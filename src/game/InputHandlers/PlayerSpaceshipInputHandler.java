@@ -24,7 +24,7 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
         int keyCode = e.getKeyCode();
         if (keyCode == KeyEvent.VK_ESCAPE){
             Phase currentPhase = PhaseManager.getCurrentPhase();
-            PhaseManager.setCurrentPhase(new PhaseMenu(new PauseMenu()));
+            PhaseManager.setCurrentPhase(new PhaseMenu(new PauseMenu(currentPhase)));
         }
 
         if (keyCode == KeyEvent.VK_DOWN){

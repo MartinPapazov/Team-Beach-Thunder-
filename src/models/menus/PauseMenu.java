@@ -13,9 +13,12 @@ public class PauseMenu extends Menu {
     private final static String MAIN_MENU = "Back to Main Menu";
     private final static String QUIT = "Quit";
 
+    private Phase currentPhase;
 
-    public PauseMenu() {
+
+    public PauseMenu(Phase currentPhase) {
         super(title);
+        this.currentPhase = currentPhase;
         this.initialization();
     }
 
@@ -23,7 +26,7 @@ public class PauseMenu extends Menu {
     public void enter() {
         switch (this.getCurrentRow()) {
             case 1:
-                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new FirstLevel()));
+                PhaseManager.setCurrentPhase(this.currentPhase);
                 break;
             case 2:
                 PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()) {

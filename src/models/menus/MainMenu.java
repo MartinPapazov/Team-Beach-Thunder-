@@ -52,8 +52,7 @@ public class MainMenu extends Menu {
                 System.exit(0);
                 break;
             case 6:
-
-                PhaseManager.setCurrentPhase(new PhaseMenu(new PauseMenu()));
+                
             default:
                 break;
         }
