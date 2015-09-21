@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class FifthLevel extends Level {
 
-    private static final BufferedImage backgroundImage = Assets.levelSixBackground;
+    private static final BufferedImage backgroundImage = Assets.levelFiveBackground;
     private static final int coins = 1600;
     private final int movementCounter = 150;
 
