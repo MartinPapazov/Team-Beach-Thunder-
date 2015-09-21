@@ -1,7 +1,5 @@
 package phases;
 
-import Utilitys.Constants;
-import graphics.Assets;
 import models.menus.Menu;
 
 import java.awt.*;

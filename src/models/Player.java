@@ -45,7 +45,7 @@ public class Player {
                     add("Spacecruiser");
                 }},
                 0,
-                2,
+                1,
                 "-"
         );
     }

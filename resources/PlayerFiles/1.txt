@@ -1,5 +1,2 @@
-<<<<<<< Updated upstream
 Pesho;;Spacecruiser;500;9;19/09/15 19:33
-=======
-bsl;Spacecruiser;Spacecruiser;0;2;21/09/15 17:22
->>>>>>> Stashed changes
+
