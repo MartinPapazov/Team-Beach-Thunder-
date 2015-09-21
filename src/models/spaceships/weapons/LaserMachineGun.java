@@ -10,7 +10,7 @@ public class LaserMachineGun extends Weapon{
     private int count;
 
     public LaserMachineGun(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 400);
         this.count = 0;
     }
 

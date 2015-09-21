@@ -14,7 +14,7 @@ public class TripleDoubleShoot extends Weapon {
     private BulletType nextBulletShot;
 
     public TripleDoubleShoot(int cooldown, boolean shootingRight, int xLaser, int yGLaser1, int yGLaser2, int yRLaser1, int yRLaser2) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
         this.yGreenLaser1 = yGLaser1;
         this.yGreenLaser2 = yGLaser2;
         this.yRedLaser1 = yRLaser1;

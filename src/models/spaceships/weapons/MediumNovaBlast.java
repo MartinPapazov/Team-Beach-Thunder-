@@ -8,7 +8,7 @@ import sun.audio.AudioPlayer;
 public class MediumNovaBlast extends Weapon {
 
     public MediumNovaBlast(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
     }
 
     @Override
