@@ -8,7 +8,7 @@ public class SuperNovaShoot extends Weapon {
     private final int xNova;
 
     public SuperNovaShoot(int cooldown, boolean shootingRight, int xNova, int yNova) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
         this.yNova = yNova;
         this.xNova = xNova;
     }

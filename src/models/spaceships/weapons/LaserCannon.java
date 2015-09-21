@@ -9,7 +9,8 @@ import sun.audio.AudioPlayer;
 public class LaserCannon extends Weapon {
 
     public LaserCannon(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+
+        super(cooldown, shootingRight, 1000);
     }
 
     @Override

@@ -8,7 +8,7 @@ import sun.audio.AudioPlayer;
 public class NovaShock extends Weapon {
 
     public NovaShock(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
     }
 
     @Override

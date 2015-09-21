@@ -9,7 +9,7 @@ public class RedLaserShoot extends Weapon {
     private final int yLaser;
 
     public RedLaserShoot(int cooldown, boolean shootingRight, int yRedLaser) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
         this.yLaser = yRedLaser;
     }
 

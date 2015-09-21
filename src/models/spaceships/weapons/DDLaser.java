@@ -22,7 +22,7 @@ public class DDLaser extends Weapon implements ActionListener {
     private int currentY;
 
     public DDLaser(int cooldown, boolean shootingRight, int yBLazer1, int yBLazer2, int yRLazer1, int yRLazer2) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
         this.redLazersShootTimer = new Timer(2000, this);
         this.yBlueLazer1 = yBLazer1;
         this.yBlueLazer2 = yBLazer2;

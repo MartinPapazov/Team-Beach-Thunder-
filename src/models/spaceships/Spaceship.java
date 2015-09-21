@@ -11,6 +11,7 @@ import sun.audio.AudioPlayer;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
@@ -181,7 +182,7 @@ public abstract class Spaceship extends GameObject implements Informational{
         String armor = Integer.toString(this.getArmor());
         String damage = Integer.toString(this.getWeapon().getDamage());
         String speed = Integer.toString(this.getVelocity());
-        HashMap<String, String> info = new HashMap<>();
+        Map<String, String> info = new LinkedHashMap<>();
         info.put("Name:", name);
         info.put("Health:", health);
         info.put("Armor:", armor);

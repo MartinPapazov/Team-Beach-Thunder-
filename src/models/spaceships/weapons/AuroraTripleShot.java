@@ -19,7 +19,7 @@ public class AuroraTripleShot extends Weapon implements ActionListener {
     private int shootCounter;
 
     public AuroraTripleShot(int cooldown, boolean shootingRight, int yPositionOnShip) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
         this.tripleShootTimer = new Timer(200, this);
         this.yPositionOnShip = yPositionOnShip;
     }

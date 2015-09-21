@@ -19,7 +19,14 @@ public class Player {
 
 
 
-    public Player(String name, Spaceship currentSpaceship, ArrayList<String> namesOfOwnedSpaceships, int coins, int levelsCompleted, String lastSave) {
+    public Player(
+            String name,
+            Spaceship currentSpaceship,
+            ArrayList<String> namesOfOwnedSpaceships,
+            int coins,
+            int levelsCompleted,
+            String lastSave
+    ) {
         this.setName(name);
         this.setCurrentSpaceship(currentSpaceship);
         this.setNamesOfOwnedSpaceships(namesOfOwnedSpaceships);
@@ -37,7 +44,7 @@ public class Player {
                     add("Spacecruiser");
                 }},
                 0,
-                0,
+                2,
                 "-"
         );
     }
