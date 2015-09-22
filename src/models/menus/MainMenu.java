@@ -16,11 +16,7 @@ public class MainMenu extends Menu {
     private final static String firstLine = "Play";
     private final static String secondLine = "Load game";
     private final static String thirdLine = "Save game";
-    private final static String forthLine = "Profile";
-    private final static String fifthLine = "Quit";
-    private final static String testingSpaceships = "Testing enemy spaceships";
-
-
+    private final static String forthLine = "Quit";
 
     public MainMenu() {
         super(title);
@@ -45,15 +41,7 @@ public class MainMenu extends Menu {
                 PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()));
                 break;
             case 4:
-
-                PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
-                break;
-            case 5:
                 System.exit(0);
-                break;
-            case 6:
-
-            default:
                 break;
         }
     }
@@ -76,7 +64,5 @@ public class MainMenu extends Menu {
         this.addRows(secondLine);
         this.addRows(thirdLine);
         this.addRows(forthLine);
-        this.addRows(fifthLine);
-        this.addRows(testingSpaceships);
     }
 }

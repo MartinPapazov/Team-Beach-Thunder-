@@ -3,10 +3,7 @@ package models.levels;
 import Utilitys.Constants;
 import graphics.Assets;
 import models.spaceships.Spaceship;
-import models.spaceships.enemySpaceships.BlueShip;
-import models.spaceships.enemySpaceships.Deathbringer;
-import models.spaceships.enemySpaceships.LittleSilver;
-import models.spaceships.enemySpaceships.NightRider;
+import models.spaceships.enemySpaceships.*;
 
 import java.awt.image.BufferedImage;
 import java.util.Random;
@@ -15,60 +12,95 @@ public class SixthLevel extends Level {
 
     private static final BufferedImage backgroundImage = Assets.levelSixBackground;
     private static final int coins = 1800;
-    private final int movementCounter = 150;
-
-    private int count;
+    private Spaceship dragonScout1 = new DragonScout(800, 30, 80);
+    private Spaceship dragonScout2 = new DragonScout(800, 530, 80);
+    private Spaceship dragonDestroyer1 = new DragonDestroyer(700, 120, 70);
+    private Spaceship dragonDestroyer2 = new DragonDestroyer(700, 370, 70);
+    private Spaceship nightRider3 = new NightRider(600, 230, 60);
+    private Spaceship littleSilver = new LittleSilver(560, 330, 90);
 
     public SixthLevel() {
         super(backgroundImage, coins, 6);
         this.initialization();
-        this.count = 0;
     }
 
     private void initialization() {
 
         this.addEnemySpaceship(
-                new Deathbringer(670, 350, 100),
-                new LittleSilver(580, 250, 170),
-                new BlueShip(550, 200, 160),
-                new NightRider(500, 100, 210),
-                new NightRider(700, 250, 200),
-                new Deathbringer(800, 400, 50)
+                this.dragonScout1,
+                this.dragonScout2,
+                this.dragonDestroyer1,
+                this.dragonDestroyer2,
+                this.nightRider3,
+                this.littleSilver
         );
+
+        this.dragonScout1.setIsMovingLeft(true);
+        this.dragonScout2.setIsMovingLeft(true);
+        this.nightRider3.setIsMovingLeft(true);
+        this.littleSilver.setIsMovingUp(true);
+        this.dragonDestroyer1.setIsMovingDown(true);
+        this.dragonDestroyer2.setIsMovingUp(true);
+
+    }
+
+    private void movingLeftAndRight(Spaceship spaceship){
+        if(spaceship.getX() < 520){
+            spaceship.setIsMovingLeft(false);
+            spaceship.setIsMovingRight(true);
+        }
+        if(spaceship.getX() >= 780){
+            spaceship.setIsMovingRight(false);
+            spaceship.setIsMovingLeft(true);
+        }
+    }
+
+    private void movingDownAndUpAgain(Spaceship spaceship){
+
+
+        if(spaceship.getY() > 430){
+            spaceship.setIsMovingDown(false);
+            spaceship.setIsMovingUp(true);
+        }
+        if(spaceship.getY() < 130){
+            spaceship.setIsMovingDown(true);
+            spaceship.setIsMovingUp(false);
+        }
+    }
+
+    private void movingUpAndDownAgain(Spaceship spaceship){
+
+        if(spaceship.getY() < 130){
+            spaceship.setIsMovingUp(false);
+            spaceship.setIsMovingDown(true);
+        }
+        if(spaceship.getY() > 430){
+            spaceship.setIsMovingDown(false);
+            spaceship.setIsMovingUp(true);
+        }
     }
 
     @Override
     protected void spaceShipRotation(Spaceship spaceship) {
+        movingLeftAndRight(this.dragonScout1);
+        movingLeftAndRight(this.dragonScout2);
+        movingLeftAndRight(this.nightRider3);
 
-        spaceship.fire();
-        if (!spaceship.isMovingDown && !spaceship.isMovingUp) {
-            Random random = new Random();
-            switch (random.nextInt(2)) {
-                case 0:
-                    spaceship.isMovingDown = true;
-                    break;
-                case 1:
-                    spaceship.isMovingUp = true;
-            }
+        if(this.littleSilver.getY() < 135){
+            this.littleSilver.setIsMovingDown(true);
+            this.littleSilver.setIsMovingUp(false);
+        }
+        if(this.littleSilver.getY() > 400){
+            this.littleSilver.setIsMovingDown(false);
+            this.littleSilver.setIsMovingUp(true);
         }
 
-        boolean isCounterFinished = this.count >= movementCounter;
-        boolean isEnemyShipAtTopLine = spaceship.getY() <= 10 + Constants.GameStatusBar;
-        boolean isEnemyShipAtBottomLine = spaceship.getY() >= Constants.WindowHeight - spaceship.getHeight() - 10;
-        if (isCounterFinished || isEnemyShipAtTopLine || isEnemyShipAtBottomLine) {
-            if (isCounterFinished) {
-                this.count = 0;
-            }
+        movingDownAndUpAgain(this.dragonDestroyer1);
+        movingUpAndDownAgain(this.dragonDestroyer2);
 
-            if (spaceship.isMovingDown) {
-                spaceship.isMovingDown = false;
-                spaceship.isMovingUp = true;
-            } else if(spaceship.isMovingUp) {
-                spaceship.isMovingUp = false;
-                spaceship.isMovingDown = true;
-            }
+        for (Spaceship sp : this.getEnemys()) {
+            sp.fire();
         }
-
-        this.count++;
     }
+
 }
