@@ -21,6 +21,7 @@ public class NinthLevel extends Level {
     private int wave;
     private int count;
     private int maxWidth;
+    private int currentHealth;
 
 
     public NinthLevel() {
@@ -28,6 +29,7 @@ public class NinthLevel extends Level {
         this.initialization();
         this.wave = 0;
         this.maxWidth = this.spaceStation.getHealth()/100;
+        this.currentHealth = spaceStation.getHealth();
     }
 
     private void initialization() {
@@ -53,11 +55,10 @@ public class NinthLevel extends Level {
         }
 
         if (areDefendersAlive) {
+            this.spaceStation.setHeath(this.currentHealth);
             this.defendersStopAtLocation();
             this.defendersAttack();
         }
-
-
     }
 
     private Spaceship getSpaceshipByWave(int num) {
@@ -71,6 +72,7 @@ public class NinthLevel extends Level {
     }
 
     private void callSpaceships() {
+        this.currentHealth = this.spaceStation.getHealth();
         for (int i = 0; i < this.defendingShips.length; i++) {
             this.defendingShips[i] = getSpaceshipByWave(i);
             this.defendingShips[i].setIsMovingLeft(true);
