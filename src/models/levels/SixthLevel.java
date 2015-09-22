@@ -20,7 +20,7 @@ public class SixthLevel extends Level {
     private int count;
 
     public SixthLevel() {
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 6);
         this.initialization();
         this.count = 0;
     }

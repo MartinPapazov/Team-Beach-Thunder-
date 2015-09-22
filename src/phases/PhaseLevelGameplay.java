@@ -1,17 +1,15 @@
 package phases;
 
 import Utilitys.Constants;
-import game.InputHandlers.InputHandler;
+import audio.AudioAssets;
 import game.InputHandlers.PlayerSpaceshipInputHandler;
 import game.Scheduling;
-import graphics.Assets;
 import models.Player;
 import models.levels.Level;
 import models.spaceships.Spaceship;
-import models.spaceships.playerSpaceships.BlackViper;
-import models.spaceships.playerSpaceships.RH5;
-import models.spaceships.playerSpaceships.Spacecruiser;
 import models.spaceships.weapons.bullets.Bullet;
+import sun.audio.AudioPlayer;
+import graphics.Assets;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -29,6 +27,7 @@ public class PhaseLevelGameplay extends Phase {
 
 
     public PhaseLevelGameplay(Level level) {
+        AudioPlayer.player.stop(AudioAssets.menuStream);
         this.level = level;
         this.setPlayer(PhaseManager.getCurrentPlayer());
         this.playerSpaceShip = this.player.getCurrentSpaceship();
@@ -67,8 +66,7 @@ public class PhaseLevelGameplay extends Phase {
         this.playerSpaceShip.render(graphics);
 
         //Draw gray bar
-        graphics.setColor(new Color(153, 153, 102));
-        graphics.fillRect(0, 0, Constants.WindowWidth, Constants.GameStatusBar);
+        graphics.drawImage(Assets.statusBarImage, 0, 0, Constants.WindowWidth, Constants.GameStatusBar,null);
         graphics.setColor(Color.black);
         graphics.drawString(this.player.getName(), 5, 20);
 

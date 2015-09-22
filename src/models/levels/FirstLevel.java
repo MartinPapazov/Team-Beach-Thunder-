@@ -17,8 +17,7 @@ public class FirstLevel extends Level {
     private int count;
 
     public FirstLevel() {
-
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 1);
         this.initialization();
         this.count = 0;
     }

@@ -1,6 +1,7 @@
 package models.menus;
 
 import audio.AudioAssets;
+import graphics.Assets;
 import models.inventorys.SpaceshipInventory;
 import models.levels.*;
 import phases.*;
@@ -16,15 +17,13 @@ public class MainMenu extends Menu {
     private final static String secondLine = "Load game";
     private final static String thirdLine = "Save game";
     private final static String forthLine = "Profile";
-    private final static String fifthLine = "EXIT";
+    private final static String fifthLine = "Quit";
     private final static String testingSpaceships = "Testing enemy spaceships";
 
 
-    private InputStream menuMusic;
 
     public MainMenu() {
         super(title);
-        this.menuMusic = AudioAssets.getMenuMusic();
         this.initialization();
     }
 
@@ -33,32 +32,27 @@ public class MainMenu extends Menu {
 
         switch (this.getCurrentRow()) {
             case 1:
-                AudioPlayer.player.stop(this.menuMusic);
-
-                //TODO: need to be changed! Testing only!
-                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new ThirdLevel()));
+                PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
                 break;
             case 2:
-                AudioPlayer.player.stop(this.menuMusic);
+
                 //Testing only
-                PhaseManager.setCurrentPhase(new PhaseLoadMenu(new LoadMenu()) {
+                PhaseManager.setCurrentPhase(new PhaseMenu(new LoadMenu()) {
                 });
                 break;
             case 3:
-                AudioPlayer.player.stop(this.menuMusic);
-                PhaseManager.setCurrentPhase(new PhaseSaveMenu(new SaveMenu()));
+
+                PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()));
                 break;
             case 4:
-                AudioPlayer.player.stop(this.menuMusic);
+
                 PhaseManager.setCurrentPhase(new PhaseInventory(new SpaceshipInventory()));
                 break;
             case 5:
-                AudioPlayer.player.stop(this.menuMusic);
                 System.exit(0);
                 break;
             case 6:
-                AudioPlayer.player.stop(this.menuMusic);
-                PhaseManager.setCurrentPhase(new PhaseLevelGameplay(new EnemySpaceshipsTestLevel()));
+
             default:
                 break;
         }
@@ -71,12 +65,13 @@ public class MainMenu extends Menu {
 
     @Override
     public void render(Graphics graphics) {
+        super.render(graphics);
     }
 
     @Override
     protected void initialization() {
-
-        AudioPlayer.player.start(this.menuMusic);
+        AudioPlayer.player.stop(AudioAssets.menuStream);
+        AudioPlayer.player.start(AudioAssets.menuStream);
         this.addRows(firstLine);
         this.addRows(secondLine);
         this.addRows(thirdLine);

@@ -21,7 +21,7 @@ public class NinthLevel extends Level {
 
     public NinthLevel() {
 
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 9);
         this.initialization();
         this.count = 0;
     }

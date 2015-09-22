@@ -2,7 +2,7 @@ package models.spaceships.enemySpaceships;
 
 import graphics.Assets;
 import models.spaceships.Spaceship;
-import models.spaceships.weapons.DDLazer;
+import models.spaceships.weapons.DDLaser;
 
 public class DragonReaper extends Spaceship {
     private static final String ShipName = "Dragon Reaper";
@@ -16,7 +16,7 @@ public class DragonReaper extends Spaceship {
         super(ShipName, x, y, ShipWidth,
                 ShipHeight, Assets.dragonReaperImage,
                 ShipHealth, ShipArmor,
-                new DDLazer(cooldown, false, 0, 60, 10, 40),
+                new DDLaser(cooldown, false, 0, 60, 10, 40),
                 ShipVelocity);
     }
 }

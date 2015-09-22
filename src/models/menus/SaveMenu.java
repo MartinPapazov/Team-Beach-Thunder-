@@ -64,6 +64,7 @@ public class SaveMenu extends Menu {
 
     @Override
     public void render(Graphics graphics) {
+        super.render(graphics);
         graphics.setColor(Color.YELLOW);
         //graphics.setFont(new Font("Monospaced", 0, 25));
         String nickname = "NICKNAME";

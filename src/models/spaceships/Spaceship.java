@@ -11,6 +11,7 @@ import sun.audio.AudioPlayer;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
@@ -22,6 +23,7 @@ public abstract class Spaceship extends GameObject implements Informational{
     private int armor;
     private Weapon weapon;
     private int velocity;
+    private int coins;
     private boolean explode;
     public boolean isExploding;
     public boolean isDestroyed;
@@ -29,6 +31,7 @@ public abstract class Spaceship extends GameObject implements Informational{
     public boolean isMovingRight;
     public boolean isMovingUp;
     public boolean isMovingDown;
+
 
     protected Spaceship(String name, int x, int y, int width, int height, BufferedImage objectImage,
                       int health, int armor, Weapon weapon, int velocity) {
@@ -46,8 +49,9 @@ public abstract class Spaceship extends GameObject implements Informational{
         this.setIsMovingUp(false);
         this.setIsExploding(false);
         this.setIsDestroyed(false);
-        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 100, false);
+        this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 50, false);
         this.explode = true;
+        this.coins = 200;
     }
 
 
@@ -152,6 +156,16 @@ public abstract class Spaceship extends GameObject implements Informational{
         this.isMovingDown = isMovingDown;
     }
 
+    private void setCoins(int coins) {
+        this.coins = coins;
+    }
+
+    public int getCoins() {
+        return this.coins;
+    }
+
+
+
     public void fire() {
         this.weapon.shoot(this.getX(), this.getY());
     }
@@ -181,12 +195,14 @@ public abstract class Spaceship extends GameObject implements Informational{
         String armor = Integer.toString(this.getArmor());
         String damage = Integer.toString(this.getWeapon().getDamage());
         String speed = Integer.toString(this.getVelocity());
-        HashMap<String, String> info = new HashMap<>();
+        String coins = Integer.toString(this.getCoins());
+        Map<String, String> info = new LinkedHashMap<>();
         info.put("Name:", name);
         info.put("Health:", health);
         info.put("Armor:", armor);
         info.put("Damage:", damage);
         info.put("Speed:", speed);
+        info.put("Coins:", coins);
         return info;
     }
 

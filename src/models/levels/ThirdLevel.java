@@ -20,7 +20,7 @@ public class ThirdLevel extends Level {
     private int count;
 
     public ThirdLevel() {
-        super(backgroundImage, coins);
+        super(backgroundImage, coins, 3);
         this.initialization();
         this.count = 0;
     }

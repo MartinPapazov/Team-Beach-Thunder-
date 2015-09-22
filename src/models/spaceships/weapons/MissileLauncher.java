@@ -8,7 +8,7 @@ import sun.audio.AudioPlayer;
 public class MissileLauncher extends Weapon {
 
     public MissileLauncher(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 700);
     }
 
     @Override

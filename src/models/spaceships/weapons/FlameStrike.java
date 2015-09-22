@@ -7,7 +7,7 @@ import sun.audio.AudioPlayer;
 public class FlameStrike extends Weapon{
 
     public FlameStrike(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
     }
 
     @Override

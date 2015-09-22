@@ -17,6 +17,7 @@ public class AudioAssets {
     private static AudioData explosionAudio;
     private static AudioData menuChoiceSound;
     private static AudioData spaceshipMissleOneAudio;
+    public static InputStream menuStream;
 
     public static InputStream getSpaceshipLasserOneAudiInputStream() {
         return loadSingleSound(spaceshipLasserOneAudio);
@@ -70,6 +71,7 @@ public class AudioAssets {
         explosionAudio = AudioLoader.getData("/audio/explosion.wav");
         menuChoiceSound = AudioLoader.getData("/audio/menuChoiceSound.wav");
         spaceshipMissleOneAudio = AudioLoader.getData("/audio/Missile1.wav");
+        menuStream = getMenuMusic();
     }
 
     private static InputStream loadSingleSound(AudioData data) {

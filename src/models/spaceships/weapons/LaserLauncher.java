@@ -12,7 +12,7 @@ public class LaserLauncher extends Weapon{
     private BulletType lastBulletShot;
 
     public LaserLauncher(int cooldown, boolean shootingRight) {
-        super(cooldown, shootingRight);
+        super(cooldown, shootingRight, 0);
     }
 
     @Override

@@ -8,16 +8,18 @@ import java.util.ArrayList;
 public abstract class Weapon {
 
     private ArrayList<Bullet>  bulletsFired;
+    private int damage;
     protected int cooldown;
     protected int cooldownCounter;
     protected boolean shootingRight;
 
 
-    protected Weapon(int cooldown, boolean shootingRight) {
+    protected Weapon(int cooldown, boolean shootingRight, int damage) {
         this.bulletsFired = new ArrayList<>();
         this.cooldown = cooldown;
         this.cooldownCounter = cooldown;
         this.shootingRight = shootingRight;
+        this.damage = damage;
     }
 
     public ArrayList<Bullet> getBulletsFired() {
@@ -25,12 +27,7 @@ public abstract class Weapon {
     }
 
     public int getDamage() {
-        int bulletsDamage = 0;
-        for (Bullet bullet : bulletsFired) {
-            bulletsDamage += bullet.getDamage();
-        }
-
-        return bulletsDamage;
+        return this.damage;
     }
 
     public abstract void shoot(int x, int y);

@@ -33,7 +33,6 @@ public class Database {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 }
 

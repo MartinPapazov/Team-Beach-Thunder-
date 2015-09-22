@@ -6,6 +6,7 @@ import models.spaceships.playerSpaceships.Spacecruiser;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class Player {
 
@@ -19,7 +20,14 @@ public class Player {
 
 
 
-    public Player(String name, Spaceship currentSpaceship, ArrayList<String> namesOfOwnedSpaceships, int coins, int levelsCompleted, String lastSave) {
+    public Player(
+            String name,
+            Spaceship currentSpaceship,
+            ArrayList<String> namesOfOwnedSpaceships,
+            int coins,
+            int levelsCompleted,
+            String lastSave
+    ) {
         this.setName(name);
         this.setCurrentSpaceship(currentSpaceship);
         this.setNamesOfOwnedSpaceships(namesOfOwnedSpaceships);
@@ -37,7 +45,7 @@ public class Player {
                     add("Spacecruiser");
                 }},
                 0,
-                0,
+                1,
                 "-"
         );
     }
@@ -58,12 +66,16 @@ public class Player {
         this.currentSpaceship = currentSpaceship;
     }
 
-    public ArrayList<String> getNamesOfOwnedSpaceships() {
+    public Collection<String> getNamesOfOwnedSpaceships() {
         return namesOfOwnedSpaceships;
     }
 
-    public void setNamesOfOwnedSpaceships(ArrayList<String> namesOfOwnedSpaceships) {
+    private void setNamesOfOwnedSpaceships(ArrayList<String> namesOfOwnedSpaceships) {
         this.namesOfOwnedSpaceships = namesOfOwnedSpaceships;
+    }
+
+    public void addNewSpaceShip(String spaceshipName) {
+        this.namesOfOwnedSpaceships.add(spaceshipName);
     }
 
     public int getCoins() {

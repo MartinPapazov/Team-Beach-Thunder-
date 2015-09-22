@@ -6,7 +6,7 @@ public class AuroraTear extends Bullet {
     private static final String name = "Aurora Tear";
     private static final int width = 40;
     private static final int height = 15;
-    private static final int damage = 50;
+    private static final int damage = 150;
     private static final int speed = 6;
 
     public AuroraTear(int x, int y, boolean flyingRight) {

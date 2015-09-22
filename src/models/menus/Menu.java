@@ -1,8 +1,10 @@
 package models.menus;
 
 
+import Utilitys.Constants;
 import audio.AudioAssets;
 import game.InputHandlers.MenuInputHandler;
+import graphics.Assets;
 import sun.audio.AudioPlayer;
 
 import java.awt.*;
@@ -53,7 +55,34 @@ public abstract class Menu {
 
     public abstract void update();
 
-    public abstract void render(Graphics graphics);
+    public void render(Graphics graphics){
+        //Background image drawn
+        graphics.drawImage(Assets.backgroundImage, 0, 0, Constants.WindowWidth, Constants.WindowHeight, null);
+
+        //Title font and color properties
+        graphics.setColor(Color.yellow);
+        Font titleFont = new Font("Serif", 1, Constants.MenuTitleSize);
+        graphics.setFont(titleFont);
+        //Draw title
+        graphics.drawString(this.title, 50, 100);
+        //Draw all lines
+
+        Font menuItemsFont = new Font("Monospaced", 0, Constants.MenuLineSize);
+        graphics.setFont(menuItemsFont);
+        int linePosition = 175;
+        for (int i = 0; i < this.rows.size(); i++) {
+            String lineText = this.rows.get(i);
+            if (i + 1 == this.currentRow) {
+                graphics.setColor(Color.GREEN);
+                graphics.drawString(lineText, 50, linePosition);
+            } else {
+                graphics.setColor(Color.RED);
+                graphics.drawString(lineText, 50, linePosition);
+            }
+            linePosition += Constants.MenuLineSize + 10;
+
+        }
+    }
 
     protected abstract void initialization();
 

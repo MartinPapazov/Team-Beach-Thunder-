@@ -1,12 +1,7 @@
 package graphics;
 
-import audio.AudioLoader;
-import jdk.internal.util.xml.impl.Input;
-import sun.audio.AudioData;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.InputStream;
 
 public class Assets {
 
@@ -24,12 +19,16 @@ public class Assets {
     public static BufferedImage inventoryObjectsBackground;
     public static BufferedImage inventoryBoltImage;
     public static BufferedImage padlockImage;
+    public static BufferedImage statusBarImage;
 
 
     //Player spaceships
     public static BufferedImage spacecruiserImage;
     public static BufferedImage blackViperImage;
     public static BufferedImage RH5SpaceshipImage;
+    public static BufferedImage downFighterImage;
+    public static BufferedImage moonStalkerImage;
+    public static BufferedImage slayerImage;
 
     //Enemy spaceships
     public static BufferedImage deathbringerImage;
@@ -51,6 +50,7 @@ public class Assets {
     public static BufferedImage mediumNovaImage;
     public static BufferedImage novaImpulseImage;
     public static BufferedImage auroraTearImage;
+    public static BufferedImage superNovaImage;
 
 
 
@@ -81,6 +81,10 @@ public class Assets {
         auroraTearImage = ImageLoader.loadImage("/images/AuroraTear.png");
         dragonScoutImage = ImageLoader.loadImage("/images/DragonScout.png");
         dragonReaperImage = ImageLoader.loadImage("/images/DragonReaper.png");
+        downFighterImage = ImageLoader.loadImage("/images/DownFighter.png");
+        moonStalkerImage = ImageLoader.loadImage("/images/MoonStalker.png");
+        superNovaImage = ImageLoader.loadImage("/images/SuperNova.png");
+        slayerImage = ImageLoader.loadImage("/images/Slayer.png");
         redLaserImage = spriteSheet.crop(0, 224, 256, 16);
         greenLaserImage = spriteSheet.crop(0, 304, 256, 16);
         blackViperImage = ImageLoader.loadImage("/images/BlackViper.png");
@@ -92,7 +96,6 @@ public class Assets {
         inventoryObjectsBackground = ImageLoader.loadImage("/images/metalBackgroundInventory.jpg");
         padlockImage = ImageLoader.loadImage("/images/Padlock.png");
         inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
+        statusBarImage = ImageLoader.loadImage("/images/statusBarImage.jpg");
     }
-
-
 }
