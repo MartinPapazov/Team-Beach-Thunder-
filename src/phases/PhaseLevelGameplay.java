@@ -65,11 +65,8 @@ public class PhaseLevelGameplay extends Phase {
         this.level.render(graphics);
         this.playerSpaceShip.render(graphics);
 
-        //Draw gray bar
-        graphics.drawImage(Assets.statusBarImage, 0, 0, Constants.WindowWidth, Constants.GameStatusBar,null);
-        graphics.setColor(Color.black);
-        graphics.drawString(this.player.getName(), 5, 20);
 
+        graphics.drawString(this.player.getName(), 5, 20);
         //Draw player health
         graphics.drawString("HP:", 200, 20);
         graphics.setColor(Color.white);
@@ -119,7 +116,9 @@ public class PhaseLevelGameplay extends Phase {
 
             for (int j = 0; j < enemySpaceships.size(); j++) {
                 Spaceship currentSpaceship = enemySpaceships.get(j);
-                currentBullet.checkForClash(currentSpaceship);
+                if (currentSpaceship != null || currentBullet != null) {
+                    currentBullet.checkForClash(currentSpaceship);
+                }
             }
         }
 

@@ -2,6 +2,7 @@ package models.levels;
 
 import Utilitys.Constants;
 import contracts.Informational;
+import graphics.Assets;
 import models.spaceships.Spaceship;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -44,6 +45,11 @@ public abstract class Level implements Informational{
     public void render(Graphics graphics) {
         graphics.drawImage(this.backgroundImage, 0, 0, Constants.WindowWidth, Constants.WindowHeight, null);
         this.enemys.stream().forEach((e) -> e.render(graphics));
+
+        //Draw gray bar
+        graphics.drawImage(Assets.statusBarImage, 0, 0, Constants.WindowWidth, Constants.GameStatusBar,null);
+        graphics.setColor(Color.black);
+
     }
 
     public BufferedImage getObjectImage() {

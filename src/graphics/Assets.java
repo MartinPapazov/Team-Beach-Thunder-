@@ -39,6 +39,7 @@ public class Assets {
     public static BufferedImage dragonDestroyerImage;
     public static BufferedImage dragonScoutImage;
     public static BufferedImage dragonReaperImage;
+    public static BufferedImage enemySpaceStation;
 
     //Bullets
     public static BufferedImage missileImage;
@@ -56,7 +57,7 @@ public class Assets {
 
     public static void initialization() {
         SpriteSheet spriteSheet = new SpriteSheet(ImageLoader.loadImage("/images/laserSpriteSheet.png"));
-
+        SpriteSheet spriteSheetStation = new SpriteSheet(ImageLoader.loadImage("/images/enemySpaceStation.png"));
         //Images
         backgroundImage = ImageLoader.loadImage("/images/MenuWallpaper.jpg");
         explosionImage = ImageLoader.loadImage("/images/ExplosionSpriteSheet.png");
@@ -97,5 +98,6 @@ public class Assets {
         padlockImage = ImageLoader.loadImage("/images/Padlock.png");
         inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
         statusBarImage = ImageLoader.loadImage("/images/statusBarImage.jpg");
+        enemySpaceStation = spriteSheetStation.crop(200, 0, 1080,710);
     }
 }
