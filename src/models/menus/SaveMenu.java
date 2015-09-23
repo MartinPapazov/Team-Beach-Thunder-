@@ -100,18 +100,21 @@ public class SaveMenu extends Menu {
         Player currentPlayer = PhaseManager.getCurrentPlayer();
         String name = currentPlayer.getName();
 
-        if (name.equals(null) || name.equals("")) {
+        if (name.equals(null) || name.trim().equals("")) {
             currentPlayer.setName(getNameFromUser());
+            if (name == null || name.trim() == "") {
+                PhaseManager.setCurrentPhase(new PhaseMenu(new MainMenu()));
+                return;
+            }
         }
+
         this.playerRepository.setPlayerById(currentRow, currentPlayer);
         PhaseManager.setCurrentPhase((new PhaseMenu(new MainMenu())));
     }
 
     private String getNameFromUser() {
-        JFrame frame = new JFrame();
-
         String name = JOptionPane.showInputDialog(
-                frame,
+                null,
                 "Please, enter your nickname",
                 "Nickname",
                 JOptionPane.INFORMATION_MESSAGE);
