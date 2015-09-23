@@ -61,6 +61,8 @@ public class SpaceshipInventory extends Inventory {
         locks[1][1] = player.getNamesOfOwnedSpaceships().contains("Slayer");
         this.spaceships[2][1] = new MoonStalker(defaultX, defaultY);
         locks[2][1] = player.getNamesOfOwnedSpaceships().contains("Moon Stalker");
+        this.spaceships[0][2] = new RedHover(defaultX, defaultY);
+        locks[0][2] = player.getNamesOfOwnedSpaceships().contains("RedHover");
 
         this.addObjectsToInformationalInventory(spaceships, locks);
     }

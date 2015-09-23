@@ -29,6 +29,7 @@ public class Assets {
     public static BufferedImage downFighterImage;
     public static BufferedImage moonStalkerImage;
     public static BufferedImage slayerImage;
+    public static BufferedImage redHover;
 
     //Enemy spaceships
     public static BufferedImage deathbringerImage;
@@ -98,6 +99,7 @@ public class Assets {
         padlockImage = ImageLoader.loadImage("/images/Padlock.png");
         inventoryBoltImage = ImageLoader.loadImage("/images/metalBoltInventoryImage.jpg");
         statusBarImage = ImageLoader.loadImage("/images/statusBarImage.jpg");
-        enemySpaceStation = spriteSheetStation.crop(200, 0, 1080,710);
+        enemySpaceStation = spriteSheetStation.crop(200, 0, 1080, 710);
+        redHover = ImageLoader.loadImage("/images/RedHover.png");
     }
 }
