@@ -19,5 +19,6 @@ public class RH5 extends Spaceship {
 
     public RH5(int x, int y) {
         super(name, x, y, width, height, Assets.RH5SpaceshipImage, health, armor, weapon, velocity);
+        this.setCoins(650);
     }
 }

@@ -37,14 +37,14 @@ public class FirstLevel extends Level {
     protected void spaceShipRotation(Spaceship spaceship) {
 
         spaceship.fire();
-        if (!spaceship.isMovingDown && !spaceship.isMovingUp) {
+        if (!spaceship.isMovingDown() && !spaceship.isMovingUp()) {
             Random random = new Random();
             switch (random.nextInt(2)) {
                 case 0:
-                    spaceship.isMovingDown = true;
+                    spaceship.setIsMovingDown(true);
                     break;
                 case 1:
-                    spaceship.isMovingUp = true;
+                    spaceship.setIsMovingUp(true);
             }
         }
 
@@ -56,12 +56,12 @@ public class FirstLevel extends Level {
                 this.count = 0;
             }
 
-            if (spaceship.isMovingDown) {
-                spaceship.isMovingDown = false;
-                spaceship.isMovingUp = true;
-            } else if(spaceship.isMovingUp) {
-                spaceship.isMovingUp = false;
-                spaceship.isMovingDown = true;
+            if (spaceship.isMovingDown()) {
+                spaceship.setIsMovingDown(false);
+                spaceship.setIsMovingUp(true);
+            } else if(spaceship.isMovingUp()) {
+                spaceship.setIsMovingUp(false);
+                spaceship.setIsMovingDown(true);
             }
         }
 

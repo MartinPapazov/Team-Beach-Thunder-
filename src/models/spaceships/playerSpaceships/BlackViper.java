@@ -18,5 +18,6 @@ public class BlackViper extends Spaceship {
 
     public BlackViper(int x, int y) {
         super(name, x, y, width, height, Assets.blackViperImage, health, armor, weapon, velocity);
+        this.setCoins(500);
     }
 }

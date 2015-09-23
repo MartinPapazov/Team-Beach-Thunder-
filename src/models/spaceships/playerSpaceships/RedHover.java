@@ -17,5 +17,6 @@ public class RedHover extends Spaceship {
 
     public RedHover(int x, int y) {
         super(name, x, y, width, height, Assets.redHover, health, armor, weapon, velocity);
+        this.setCoins(1700);
     }
 }

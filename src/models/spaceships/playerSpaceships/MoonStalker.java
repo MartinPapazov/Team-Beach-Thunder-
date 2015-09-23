@@ -17,5 +17,6 @@ public class MoonStalker extends Spaceship {
 
     public MoonStalker(int x, int y) {
         super(name, x, y, width, height, Assets.moonStalkerImage, health, armor, weapon, velocity);
+        this.setCoins(1200);
     }
 }

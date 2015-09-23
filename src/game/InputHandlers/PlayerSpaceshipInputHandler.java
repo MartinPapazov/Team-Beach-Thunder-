@@ -28,19 +28,19 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
         }
 
         if (keyCode == KeyEvent.VK_DOWN){
-            this.spaceship.isMovingDown = true;
+            this.spaceship.setIsMovingDown(true);
         }
 
         if (keyCode == KeyEvent.VK_UP) {
-            this.spaceship.isMovingUp = true;
+            this.spaceship.setIsMovingUp(true);
         }
 
         if (keyCode == KeyEvent.VK_LEFT){
-            this.spaceship.isMovingLeft = true;
+            this.spaceship.setIsMovingLeft(true);
         }
 
         if (keyCode == KeyEvent.VK_RIGHT) {
-            this.spaceship.isMovingRight = true;
+            this.spaceship.setIsMovingRight(true);
         }
 
         if (keyCode == KeyEvent.VK_SPACE) {
@@ -57,19 +57,19 @@ public class PlayerSpaceshipInputHandler extends InputHandler {
         int keyCode = e.getKeyCode();
 
         if (keyCode == KeyEvent.VK_DOWN){
-            this.spaceship.isMovingDown = false;
+            this.spaceship.setIsMovingDown(false);
         }
 
         if (keyCode == KeyEvent.VK_UP) {
-            this.spaceship.isMovingUp = false;
+            this.spaceship.setIsMovingUp(false);
         }
 
         if (keyCode == KeyEvent.VK_LEFT){
-            this.spaceship.isMovingLeft = false;
+            this.spaceship.setIsMovingLeft(false);
         }
 
         if (keyCode == KeyEvent.VK_RIGHT) {
-            this.spaceship.isMovingRight = false;
+            this.spaceship.setIsMovingRight(false);
         }
 
     }

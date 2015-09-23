@@ -16,5 +16,6 @@ public class DownFighter extends Spaceship {
 
     public DownFighter(int x, int y) {
         super(name, x, y, width, height, Assets.downFighterImage, health, armor, weapon, velocity);
+        this.setCoins(1000);
     }
 }

@@ -25,12 +25,12 @@ public abstract class Spaceship extends GameObject implements Informational{
     private int velocity;
     private int coins;
     private boolean explode;
-    public boolean isExploding;
-    public boolean isDestroyed;
-    public boolean isMovingLeft;
-    public boolean isMovingRight;
-    public boolean isMovingUp;
-    public boolean isMovingDown;
+    private boolean isExploding;
+    private boolean isDestroyed;
+    private boolean isMovingLeft;
+    private boolean isMovingRight;
+    private boolean isMovingUp;
+    private boolean isMovingDown;
 
 
     protected Spaceship(String name, int x, int y, int width, int height, BufferedImage objectImage,
@@ -51,7 +51,7 @@ public abstract class Spaceship extends GameObject implements Informational{
         this.setIsDestroyed(false);
         this.blowingAnimation = new SpriteSheetAnimation(Assets.explosionImage, 0, 0, 100, 100, 81, 50, false);
         this.explode = true;
-        this.coins = 200;
+        this.coins = 0;
     }
 
 
@@ -81,20 +81,10 @@ public abstract class Spaceship extends GameObject implements Informational{
         return this.armor;
     }
 
-    public void setArmor(int armor) {
-        this.armor = armor;
-    }
-
     public int getVelocity() {
 
         return this.velocity;
     }
-
-    public void setVelocity(int velocity) {
-
-        this.velocity = velocity;
-    }
-
 
     public boolean isMovingRight() {
 
@@ -156,7 +146,7 @@ public abstract class Spaceship extends GameObject implements Informational{
         this.isMovingDown = isMovingDown;
     }
 
-    private void setCoins(int coins) {
+    protected void setCoins(int coins) {
         this.coins = coins;
     }
 

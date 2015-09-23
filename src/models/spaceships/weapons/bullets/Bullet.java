@@ -50,7 +50,7 @@ public abstract class Bullet extends GameObject {
     }
 
     public void checkForClash(Spaceship spaceship) {
-        if (spaceship.isDestroyed || spaceship.isExploding || !this.isActive){
+        if (spaceship.isDestroyed() || spaceship.isExploding() || !this.isActive){
             return;
         }
 

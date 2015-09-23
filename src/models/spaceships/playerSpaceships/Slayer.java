@@ -17,5 +17,6 @@ public class Slayer extends Spaceship {
 
     public Slayer(int x, int y) {
         super(name, x, y, width, height, Assets.slayerImage, health, armor, weapon, velocity);
+        this.setCoins(1000);
     }
 }
