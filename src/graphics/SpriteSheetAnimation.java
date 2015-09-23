@@ -1,7 +1,5 @@
 package graphics;
 
-import game.Scheduling;
-
 import java.awt.image.BufferedImage;
 
 public class SpriteSheetAnimation extends SpriteSheet {

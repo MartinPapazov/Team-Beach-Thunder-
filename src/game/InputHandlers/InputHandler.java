@@ -1,7 +1,6 @@
 package game.InputHandlers;
 
 import display.Display;
-import models.menus.Menu;
 
 import java.awt.event.KeyListener;
 

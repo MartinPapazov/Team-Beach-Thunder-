@@ -1,10 +1,8 @@
 package game.InputHandlers;
 
 import models.inventorys.Inventory;
-import phases.PhaseManager;
 
 import java.awt.event.KeyEvent;
-import java.security.Key;
 
 public class InventoryInputHandler extends InputHandler {
 

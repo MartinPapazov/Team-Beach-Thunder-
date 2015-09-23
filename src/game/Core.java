@@ -2,9 +2,7 @@ package game;
 
 import audio.AudioAssets;
 import display.Display;
-import game.InputHandlers.MenuInputHandler;
 import graphics.Assets;
-import models.menus.PauseMenu;
 import phases.Phase;
 import phases.PhaseManager;
 

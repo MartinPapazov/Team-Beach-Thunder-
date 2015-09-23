@@ -5,7 +5,6 @@ import display.Display;
 import models.menus.Menu;
 
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class MenuInputHandler extends InputHandler {
 
