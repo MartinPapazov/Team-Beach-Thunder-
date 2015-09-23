@@ -2,9 +2,13 @@ package phases;
 
 import Utilitys.Constants;
 import audio.AudioAssets;
+import display.Display;
+import game.InputHandlers.InputHandler;
 import game.InputHandlers.PlayerSpaceshipInputHandler;
 import game.Scheduling;
+import jdk.internal.util.xml.impl.Input;
 import models.Player;
+import models.inventorys.SpaceshipInventory;
 import models.levels.Level;
 import models.spaceships.Spaceship;
 import models.spaceships.weapons.bullets.Bullet;
@@ -24,6 +28,7 @@ public class PhaseLevelGameplay extends Phase {
     private int playerFullArmor;
     private boolean isGameOver;
     private boolean isGameWin;
+    private InputHandler handler;
 
 
     public PhaseLevelGameplay(Level level) {
@@ -33,10 +38,20 @@ public class PhaseLevelGameplay extends Phase {
         this.playerSpaceShip = this.player.getCurrentSpaceship();
         this.playerFullHealth = this.playerSpaceShip.getHealth();
         this.playerFullArmor = this.playerSpaceShip.getArmor();
-        new PlayerSpaceshipInputHandler(playerSpaceShip);
+        this.activateInputHandler();
         this.scheduling = new Scheduling(Constants.GameplayFps);
         this.isGameOver = false;
         this.isGameWin = false;
+    }
+
+    public void activateInputHandler() {
+        this.handler = new PlayerSpaceshipInputHandler(playerSpaceShip);
+    }
+
+    public void deactivateInputHandler() {
+        if (this.handler != null) {
+            Display.getInstance().getCanvas().removeKeyListener(this.handler);
+        }
     }
 
     private void setPlayer(Player player) {
@@ -57,6 +72,17 @@ public class PhaseLevelGameplay extends Phase {
 
             this.checkForClash();
             this.checkForGameEnd();
+        }
+
+        if (this.isGameWin) {
+            this.deactivateInputHandler();
+            this.gameWin();
+            PhaseManager.setCurrentPhase(new PhaseEndGame(false));
+        }
+
+        if (this.isGameOver) {
+            this.deactivateInputHandler();
+            PhaseManager.setCurrentPhase(new PhaseEndGame(true));
         }
     }
 
@@ -93,9 +119,6 @@ public class PhaseLevelGameplay extends Phase {
         graphics.drawRect(390, 5, 100, 20);
         graphics.drawString(this.playerSpaceShip.getArmor() + "/" + this.playerFullArmor, 395, 20);
 
-        if (this.isGameOver) {
-            //TODO: GAME OVER Message drawn.
-        }
     }
 
     private int getPlayerAtributePercent(int full, int current) {

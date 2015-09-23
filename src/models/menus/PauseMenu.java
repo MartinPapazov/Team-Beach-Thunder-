@@ -19,6 +19,7 @@ public class PauseMenu extends Menu {
     public PauseMenu(Phase currentPhase) {
         super(title);
         this.currentPhase = currentPhase;
+        ((PhaseLevelGameplay)this.currentPhase).deactivateInputHandler();
         this.initialization();
     }
 
@@ -26,16 +27,13 @@ public class PauseMenu extends Menu {
     public void enter() {
         switch (this.getCurrentRow()) {
             case 1:
+                ((PhaseLevelGameplay)this.currentPhase).activateInputHandler();
                 PhaseManager.setCurrentPhase(this.currentPhase);
                 break;
             case 2:
-                PhaseManager.setCurrentPhase(new PhaseMenu(new SaveMenu()) {
-                });
-                break;
-            case 3:
                 PhaseManager.setCurrentPhase(new PhaseMenu(new MainMenu()));
                 break;
-            case 4:
+            case 3:
                 System.exit(0);
                 break;
         }
@@ -54,7 +52,6 @@ public class PauseMenu extends Menu {
     @Override
     protected void initialization() {
         this.addRows(RESUME);
-        this.addRows(SAVE);
         this.addRows(MAIN_MENU);
         this.addRows(QUIT);
     }
