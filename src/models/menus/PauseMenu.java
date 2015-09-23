@@ -1,6 +1,5 @@
 package models.menus;
 
-import models.levels.FirstLevel;
 import phases.*;
 
 import java.awt.*;
@@ -9,7 +8,6 @@ public class PauseMenu extends Menu {
 
     private final static String title = "Pause Menu";
     private final static String RESUME = "Resume";
-    private final static String SAVE = "Save Game";
     private final static String MAIN_MENU = "Back to Main Menu";
     private final static String QUIT = "Quit";
 

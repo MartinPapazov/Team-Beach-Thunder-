@@ -6,16 +6,23 @@ import phases.PhaseInventory;
 import phases.PhaseLevelGameplay;
 import phases.PhaseManager;
 
+import javax.swing.*;
+
 public class LevelInventory extends Inventory {
     private Level[][] levels;
 
     @Override
     public void enter() {
         Level level = this.levels[this.getCurrentCol()][this.getCurrentRow()];
-
-        PhaseManager.setCurrentPhase(new PhaseLevelGameplay(level));
-        Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
-
+        if (this.getLocks()[this.getCurrentCol()][this.getCurrentRow()]) {
+            PhaseManager.setCurrentPhase(new PhaseLevelGameplay(level));
+            Display.getInstance().getCanvas().removeKeyListener(this.getHandler());
+        } else {
+            JOptionPane.showMessageDialog(null,
+                    "You have to complete previous level to unlock this level.",
+                    "Level locked!",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     @Override
