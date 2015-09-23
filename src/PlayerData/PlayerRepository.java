@@ -1,4 +1,4 @@
-package PlayerData;
+package playerData;
 
 import models.Player;
 import java.text.DateFormat;

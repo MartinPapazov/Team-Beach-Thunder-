@@ -1,6 +1,6 @@
 package models.menus;
 
-import PlayerData.PlayerRepository;
+import playerData.PlayerRepository;
 import models.Player;
 import phases.PhaseManager;
 import phases.PhaseMenu;
