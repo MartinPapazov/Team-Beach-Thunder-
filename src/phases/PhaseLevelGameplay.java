@@ -97,7 +97,7 @@ public class PhaseLevelGameplay extends Phase {
         graphics.drawString("HP:", 200, 20);
         graphics.setColor(Color.white);
         graphics.fillRect(225, 5, 100, 20);
-        int playerHealthInPercentage = getPlayerAtributePercent(this.playerFullHealth, this.playerSpaceShip.getHealth());
+        int playerHealthInPercentage = getPlayerAtributeInPercent(this.playerFullHealth, this.playerSpaceShip.getHealth());
         if (playerHealthInPercentage > 20) {
             graphics.setColor(Color.green);
         } else {
@@ -113,7 +113,7 @@ public class PhaseLevelGameplay extends Phase {
         graphics.setColor(Color.white);
         graphics.fillRect(390, 5, 100, 20);
         graphics.setColor(Color.CYAN);
-        int playerArmorInPercentage = this.getPlayerAtributePercent(this.playerFullArmor, this.playerSpaceShip.getArmor());
+        int playerArmorInPercentage = this.getPlayerAtributeInPercent(this.playerFullArmor, this.playerSpaceShip.getArmor());
         graphics.fillRect(390, 5, playerArmorInPercentage, 20);
         graphics.setColor(Color.black);
         graphics.drawRect(390, 5, 100, 20);
@@ -121,7 +121,7 @@ public class PhaseLevelGameplay extends Phase {
 
     }
 
-    private int getPlayerAtributePercent(int full, int current) {
+    private int getPlayerAtributeInPercent(int full, int current) {
         double onePercent = full / 100;
         if (current <= 0) {
             return 0;

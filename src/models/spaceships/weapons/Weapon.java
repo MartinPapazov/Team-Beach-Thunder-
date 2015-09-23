@@ -46,6 +46,13 @@ public abstract class Weapon {
         }
     }
 
+    public void deactivateWeapon() {
+        for (int i = 0; i < this.bulletsFired.size(); i++) {
+            Bullet bullet = this.bulletsFired.get(i);
+            bullet.deactivateBullet();
+        }
+    }
+
     protected void addBullet(Bullet bullet) {
         this.bulletsFired.add(bullet);
     }

@@ -169,6 +169,7 @@ public abstract class Spaceship extends GameObject implements Informational{
             this.armor = 0;
             this.health -= damage;
             if (this.health <= 0) {
+                this.weapon.deactivateWeapon();
                 if (this.explode) {
                     AudioPlayer.player.start(AudioAssets.getExplosionAudio());
                     this.explode = false;

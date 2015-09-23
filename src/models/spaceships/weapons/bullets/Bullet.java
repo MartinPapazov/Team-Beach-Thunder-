@@ -56,8 +56,14 @@ public abstract class Bullet extends GameObject {
 
         if (spaceship.getBoundingBox().contains(this.getBoundingBox()) ||
                 this.getBoundingBox().contains(spaceship.getBoundingBox())) {
-            spaceship.hit(this.damage);
-            this.isActive = false;
+            if (this.isActive) {
+                spaceship.hit(this.damage);
+                this.isActive = false;
+            }
         }
+    }
+
+    public void deactivateBullet() {
+        this.isActive = false;
     }
 }
